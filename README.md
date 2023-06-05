@@ -1,6 +1,6 @@
-# Bun Experience
+# Bun Dev
 
-> Experiencing using Bun
+> Experiencing with Bun
 
 ## Technologies
 
