@@ -5,9 +5,16 @@
 	},
 	"formatter": {
 		"enabled": true,
+		"formatWithErrors": false,
+		"indentStyle": "space",
 		"indentSize": 2,
-		"indentStyle": "tab",
-		"lineWidth": 120
+		"lineWidth": 80,
+		"ignore": []
+	},
+	"javascript": {
+		"formatter":{
+			"quoteStyle": "single"
+		}
 	},
 	"linter": {
 		"enabled": true,

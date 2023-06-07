@@ -3,7 +3,6 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "dev": "bun --watch server.ts",
     "test": "bun test"
   },
   "devDependencies": {
@@ -12,5 +11,9 @@
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "discord.js": "^14.11.0",
+    "puppeteer": "^20.5.0"
   }
 }
