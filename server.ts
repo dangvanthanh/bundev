@@ -1,18 +1,13 @@
-const server = Bun.serve({
-  port: 3000,
-  fetch(req) {
-    const url = new URL(req.url);
+import { Elysia } from "elysia";
 
-    if (url.pathname === '/') {
-      return new Response('Home page');
-    }
+const app = new Elysia()
+  .get("/", () => "Hello Elysia")
+  .post("/article", () => "From Post")
+  .put("/article", () => "From Put")
+  .listen(3000);
 
-    if (url.pathname === '/blog') {
-      return new Response('Blog page');
-    }
+console.log(
+  `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
+);
 
-    return new Response('404');
-  },
-});
-
-console.log(`Listening on http://localhost:${server.port} ...`);
+export type App = typeof app;

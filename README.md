@@ -8,6 +8,7 @@
 - [Rome](https://rome.tools/)
 - [Puppetter](https://pptr.dev/)
 - [Discord.js](https://discord.js.org/)
+- [Elysia](https://elysiajs.com/)
 
 ## License
 
