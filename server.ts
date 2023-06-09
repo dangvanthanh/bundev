@@ -4,6 +4,7 @@ const app = new Elysia()
   .get("/", () => "Hello Elysia")
   .post("/article", () => "From Post")
   .put("/article", () => "From Put")
+  .delete('/article', () => "From Delete")
   .listen(3000);
 
 console.log(
