@@ -2,19 +2,11 @@ import { buchta } from 'buchta-elysia-integration';
 import { Elysia, t } from 'elysia';
 import { cors } from '@elysiajs/cors';
 import cron from '@elysiajs/cron';
+import { article } from './modules';
 
 const app = new Elysia();
 
 app
-  .get('/article', () => 'From Get')
-  .post('/article', () => 'From Post')
-  .put('/article', () => 'From Put')
-  .patch('/article', () => 'From Patch')
-  .delete('/article', () => 'From Delete')
-  .options('/article', () => 'From Options')
-  .head('/article', () => 'From Head')
-  .trace('/article', () => 'From Trace')
-  .connect('/article', () => 'From Connect')
   // Custom method should be all uppercased
   .route('GET', '/search', () => 'From Custom Method!!!')
   // Group
@@ -34,4 +26,4 @@ app.use(buchta).use(cors()).use(cron({
   run() {
     console.log('Heartbeat')
   }
-}))
+})).use(article)
