@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { css } from "../styled-system/css";
+import { flex } from "../styled-system/patterns"
 import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <div :class="css({ display: 'flex', alignItems: 'center', justifyContent: 'center' })">
+  <div :class="flex({ align: 'center', justify: 'center' })">
     <a :class="css({
       height: '6rem',
       padding: '1.5rem',
