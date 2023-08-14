@@ -1,13 +1,17 @@
 {
   "name": "bundev",
   "scripts": {
-    "dev": "bun run --watch src/server.ts"
+    "dev": "bun run --watch src/index.ts",
+    "lint": "bun run rome check **/*.ts",
+    "format": "bun run rome format **/*.ts --write"
   },
   "dependencies": {
     "@elysiajs/html": "^0.6.0",
+    "@elysiajs/swagger": "^0.6.0",
     "elysia": "^0.6.10"
   },
   "devDependencies": {
-    "bun-types": "^0.7.3"
+    "bun-types": "^0.7.3",
+    "rome": "^12.1.3"
   }
 }

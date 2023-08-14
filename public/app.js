@@ -14,8 +14,6 @@ function Books() {
         .then((books) => {
           this.books = books;
         });
-
-      console.log(this.books);
     },
     openAddBook() {
       this.book = {
