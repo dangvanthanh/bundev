@@ -1,4 +1,13 @@
 {
   "name": "bundev",
-  "workspaces": ["packages/*"]
+  "scripts": {
+    "dev": "bun run --watch src/server.ts"
+  },
+  "dependencies": {
+    "@elysiajs/html": "^0.6.0",
+    "elysia": "^0.6.10"
+  },
+  "devDependencies": {
+    "bun-types": "^0.7.3"
+  }
 }
