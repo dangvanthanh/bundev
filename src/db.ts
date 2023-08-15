@@ -10,7 +10,7 @@ export class BooksDatabase {
   private db: Database;
 
   constructor() {
-    this.db = new Database('books.db');
+    this.db = new Database('books.sqlite');
 
     this.initialize()
       .then(() => console.log('Database initialized'))

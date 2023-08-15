@@ -30,7 +30,7 @@ function Books() {
       this.openNew = false;
     },
     addBook() {
-      const [name, author] = [this.book.name, this.book.author];
+      const [name, author] = [this.book.name.trim(), this.book.author.trim()];
 
       fetch('/books', {
         method: 'POST',
@@ -63,8 +63,8 @@ function Books() {
     updateBook() {
       const [id, name, author] = [
         this.selectedBook.id,
-        this.selectedBook.name,
-        this.selectedBook.author,
+        this.selectedBook.name.trim(),
+        this.selectedBook.author.trim(),
       ];
 
       fetch(`/books/${id}`, {
