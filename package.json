@@ -8,9 +8,11 @@
   },
   "dependencies": {
     "@elysiajs/html": "^0.6.0",
+    "@elysiajs/static": "^0.6.0",
     "@elysiajs/swagger": "^0.6.0",
     "elysia": "^0.6.10",
-    "mitata": "^0.1.6"
+    "mitata": "^0.1.6",
+    "typed-html": "^3.0.1"
   },
   "devDependencies": {
     "bun-types": "^0.7.3",

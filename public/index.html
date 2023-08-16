@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Books Store</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
-    <link rel="stylesheet" href="/app.css" />
+    <link rel="stylesheet" href="/public/app.css" />
 </head>
 
 <body>
     <div class="py-16 mx-auto max-w-4xl px-8 sm:py-24 sm:px-8" x-data="Books" x-init="initialize()">
+        <a href="/htmx" class="block mb-2 text-gray-500 font-semibold">/htmx</a>
         <div class="flex items-center justify-between">
             <h1 class="text-3xl leading-tight font-semibold">
                 Books Store
@@ -250,7 +251,7 @@
         </div>
     </div>
     <script src="//unpkg.com/alpinejs" defer></script>
-    <script src="/app.js"></script>
+    <script src="/public/app.js"></script>
 </body>
 
 </html>

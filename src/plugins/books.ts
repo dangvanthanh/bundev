@@ -1,8 +1,9 @@
 import { Elysia } from 'elysia';
 import { BooksDatabase } from '../db';
-import { BookDTO } from '../models';
+import { bookModel } from '../models';
 
 export const books = new Elysia()
+  .use(bookModel)
   .decorate('db', new BooksDatabase())
   .get('/books', ({ db }) => db.getBooks())
   .post(
@@ -15,7 +16,7 @@ export const books = new Elysia()
       };
     },
     {
-      body: BookDTO,
+      body: 'book',
     },
   )
   .put(
@@ -29,7 +30,7 @@ export const books = new Elysia()
       }
     },
     {
-      body: BookDTO,
+      body: 'book',
     },
   )
   .delete('/books/:id', ({ db, params }) => {

@@ -1,6 +1,9 @@
-import { t } from 'elysia';
+import Elysia, { t } from 'elysia';
 
-export const BookDTO = t.Object({
-  name: t.String(),
-  author: t.String(),
-});
+export const bookModel = (app: Elysia) =>
+  app.model({
+    book: t.Object({
+      name: t.String(),
+      author: t.String(),
+    }),
+  });
