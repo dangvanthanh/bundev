@@ -1,4 +1,4 @@
-import { run, bench } from 'mitata';
+import { bench, run } from 'mitata';
 import { Database } from 'bun:sqlite';
 
 const db = Database.open('./books.sqlite');

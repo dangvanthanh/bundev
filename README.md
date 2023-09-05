@@ -5,7 +5,7 @@
 ## Technologies
 
 - [Bun](https://bun.sh/)
-- [Rome](https://rome.tools/)
+- [Biome](https://biomejs.dev)
 - [Puppetter](https://pptr.dev/)
 - [Discord.js](https://discord.js.org/)
 - [Elysia](https://elysiajs.com/)

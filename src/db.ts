@@ -33,9 +33,7 @@ export class BooksDatabase {
   }
 
   async updateBook(id: number, book: Book) {
-    return this.db.run(
-      `UPDATE books SET name = '${book.name}', author = '${book.author}' WHERE id = ${id}`,
-    );
+    return this.db.run(`UPDATE books SET name = '${book.name}', author = '${book.author}' WHERE id = ${id}`);
   }
 
   async deleteBook(id: number) {
