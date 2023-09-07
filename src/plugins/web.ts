@@ -1,5 +1,5 @@
-import { Elysia } from 'elysia';
 import { html } from '@elysiajs/html';
+import { Elysia } from 'elysia';
 
 const page = `<!DOCTYPE HTML>
 <html lang="en">
@@ -8,7 +8,7 @@ const page = `<!DOCTYPE HTML>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Books Store</title>
       <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
-      <link rel="stylesheet" href="/public/app.css" />
+      <link rel="stylesheet" href="/public/assets/css/app.css" />
     </head>
     <body>
         <div class="py-16 mx-auto max-w-4xl px-8 sm:py-24 sm:px-8">
@@ -18,7 +18,7 @@ const page = `<!DOCTYPE HTML>
           </h1>
         </div>
         <script src="//unpkg.com/alpinejs" defer></script>
-        <script src="/public/app.js"></script>
+        <script src="/public/assets/js/app.js"></script>
     </body>
 </html>`;
 

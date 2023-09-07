@@ -6,252 +6,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Books Store</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
-    <link rel="stylesheet" href="/public/app.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/assets/css/app.css" />
 </head>
 
 <body>
-    <div class="py-16 mx-auto max-w-4xl px-8 sm:py-24 sm:px-8" x-data="Books" x-init="initialize()">
-        <a href="/htmx" class="block mb-2 text-gray-500 font-semibold">/htmx</a>
-        <div class="flex items-center justify-between">
-            <h1 class="text-3xl leading-tight font-semibold">
-                Books Store
+    <header role="banner" class="w-full max-w-5xl mx-auto px-4">
+        <div class="flex items-center justify-between py-5">
+            <h1>
+                <a href="#" class="uppercase text-xl">
+                    <span>My</span><span class="font-semibold">Book</span>
+                </a>
             </h1>
-            <button type="button"
-                class="inline-flex justify-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-                @click="openAddBook()">New</button>
+            <nav>
+                <a href="#" class="py-2 px-3 font-medium">Explorer</a>
+            </nav>
         </div>
-
-        <div class="mt-8 flow-root">
-            <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
-                    <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 sm:rounded-lg">
-                        <table class="min-w-full divide-y divide-gray-300">
-                            <thead class="bg-gray-50">
-                                <tr>
-                                    <th scope="col"
-                                        class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900">
-                                        Id
-                                    </th>
-                                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                                        Name
-                                    </th>
-                                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                                        Author
-                                    </th>
-                                    <th scope="col" class="relative py-3.5 pl-3 pr-4">
-                                        <span class="sr-only">Edit</span>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-gray-200">
-                                <template x-if="books.length > 0">
-                                    <template x-for="book in books">
-                                        <tr>
-                                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900"
-                                                x-text="book.id"></td>
-                                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
-                                                x-text="book.name">
-                                            </td>
-                                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
-                                                x-text="book.author">
-                                            </td>
-                                            <td
-                                                class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium">
-                                                <button type="button"
-                                                    class="bg-gray-100 text-gray-500 w-8 h-8 inline-flex items-center justify-center rounded hover:bg-blue-500 hover:text-white"
-                                                    @click="openEditBook(book.id)">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                        class="w-5 h-5">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                            d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
-                                                    </svg>
-                                                </button>
-                                                <button type="button"
-                                                    class="bg-gray-100 text-gray-500 w-8 h-8 inline-flex items-center justify-center rounded hover:bg-red-500 hover:text-white"
-                                                    @click="deleteBook(book.id)">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                        class="w-5 h-5">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                            d="M6 18L18 6M6 6l12 12" />
-                                                    </svg>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    </template>
-                                </template>
-                                <template x-if="books.length === 0">
-                                    <tr>
-                                        <td colspan="4"
-                                            class="whitespace-nowrap py-4 px-3 text-sm text-center font-medium text-gray-900">
-                                            No books
-                                        </td>
-                                    </tr>
-                                </template>
-                            </tbody>
-                        </table>
+    </header>
+    <main role="main">
+        <div class="w-full max-w-5xl mx-auto px-4 py-16">
+            <div class="w-1/2">
+                <h2 class="text-6xl leading-tight uppercase font-semibold mb-3">
+                    read and add your insight
+                </h2>
+                <p class="text-lg capitalize">find your favorite book and read it here for free</p>
+                <div class="mt-6">
+                    <input type="text" class="bg-slate-50 p-3 w-full border-gray-300" placeholder="Search Book">
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-50">
+            <div class="container mx-auto py-16">
+                <div class="flex flex-wrap">
+                    <div class="w-1/3 px-8">
+                        <h3 class="text-lg font-medium mb-3">Book by Genre</h3>
+                        <ul>
+                            <li class="py-1.5">
+                                <a href="#">All Genres</a>
+                            </li>
+                            <li class="py-1.5">
+                                <a href="#">Business</a>
+                            </li>
+                            <li class="py-1.5">
+                                <a href="#">Science</a>
+                            </li>
+                            <li class="py-1.5">
+                                <a href="#">Fiction</a>
+                            </li>
+                            <li class="py-1.5">
+                                <a href="#">Philosophy</a>
+                            </li>
+                            <li class="py-1.5">
+                                <a href="#">Biography</a>
+                            </li>
+                        </ul>
+                        <hr class="my-8 border-t border-gray-200">
+                        <h3 class="text-lg font-medium mb-3">Recomendations</h3>
+                        <ul>
+                            <li class="py-1.5">
+                                <a href="#">Artist of the Month</a>
+                            </li>
+                            <li class="py-1.5">
+                                <a href="#">Book of the Year</a>
+                            </li>
+                            <li class="py-1.5">
+                                <a href="#">Top Genre</a>
+                            </li>
+                            <li class="py-1.5">
+                                <a href="#">Trending</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-2/3 p-8 bg-white">
+                        <h2 class="text-3xl font-medium mb-3">Recommended</h2>
+                        <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
+                            <div class="flex flex-wrap">
+                                <div class="w-[160px]">
+                                    <img src="/public//assets/images/book-1.png" alt="">
+                                </div>
+                                <div class="flex-1 space-y-2 mt-3">
+                                    <h3 class="text-lg capitalize">all the light we cannot see</h3>
+                                    <p class="text-gray-700 capitalize">by anthony doerr</p>
+                                    <p class="text-gray-500">
+                                        1,988,288 votes
+                                    </p>
+                                    <p class="text-gray-500">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Purus morbi eleifend enim, tristique
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap">
+                                <div class="w-[160px]">
+                                    <img src="/public//assets/images/book-2.png" alt="">
+                                </div>
+                                <div class="flex-1 space-y-2 mt-3">
+                                    <h3 class="text-lg capitalize">where the crawdads sing</h3>
+                                    <p class="text-gray-700 capitalize">by delia owens</p>
+                                    <p class="text-gray-500">
+                                        1,988,288 votes
+                                    </p>
+                                    <p class="text-gray-500">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Purus morbi eleifend enim, tristique
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap">
+                                <div class="w-[160px]">
+                                    <img src="/public//assets/images/book-3.png" alt="">
+                                </div>
+                                <div class="flex-1 space-y-2 mt-3">
+                                    <h3 class="text-lg capitalize">rich people problems</h3>
+                                    <p class="text-gray-700 capitalize">by kevin kwan</p>
+                                    <p class="text-gray-500">
+                                        1,988,288 votes
+                                    </p>
+                                    <p class="text-gray-500">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Purus morbi eleifend enim, tristique
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap">
+                                <div class="w-[160px]">
+                                    <img src="/public//assets/images/book-4.png" alt="">
+                                </div>
+                                <div class="flex-1 space-y-2 mt-3">
+                                    <h3 class="text-lg capitalize">crazy rich asians</h3>
+                                    <p class="text-gray-700 capitalize">by kevin kwan</p>
+                                    <p class="text-gray-500">
+                                        1,988,288 votes
+                                    </p>
+                                    <p class="text-gray-500">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Purus morbi eleifend enim, tristique
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="relative z-10" aria-labelledby="slide-over-new-book" role="dialog" aria-modal="true"
-            x-show="openNew" style="display: none;">
-            <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
-
-            <div class="fixed inset-0 z-10 overflow-y-auto">
-                <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-                    <div
-                        class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:w-full sm:max-w-md">
-                        <form class="flex h-full flex-col">
-                            <div class="flex-1">
-                                <div class="bg-gray-50 p-4">
-                                    <div class="flex items-start justify-between space-x-3">
-                                        <div class="space-y-1">
-                                            <h2 class="text-lg font-semibold leading-6 text-gray-900">New Book</h2>
-                                        </div>
-                                        <div class="flex h-7 items-center">
-                                            <button type="button" class="relative text-gray-400 hover:text-gray-500"
-                                                @click="closeAddBook()">
-                                                <span class="absolute -inset-2.5"></span>
-                                                <span class="sr-only">Close panel</span>
-                                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                                    stroke="currentColor" aria-hidden="true">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        d="M6 18L18 6M6 6l12 12" />
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="space-y-3 py-6 sm:space-y-0 sm:py-0">
-                                    <div class="space-y-2 px-4 sm:grid sm:gap-4 sm:space-y-0 sm:px-4 sm:py-2">
-                                        <div>
-                                            <label for="book-name"
-                                                class="block text-sm font-medium leading-6 text-gray-900 sm:mt-1.5">Name</label>
-                                        </div>
-                                        <div class="sm:col-span-2">
-                                            <input type="text" name="book-name" id="book-name"
-                                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
-                                                x-model="book.name">
-                                        </div>
-                                    </div>
-
-                                    <div class="space-y-2 px-4 sm:grid sm:gap-4 sm:space-y-0 sm:px-4 sm:py-2">
-                                        <div>
-                                            <label for="book-author"
-                                                class="block text-sm font-medium leading-6 text-gray-900 sm:mt-1.5">Author</label>
-                                        </div>
-                                        <div class="sm:col-span-2">
-                                            <input type="text" name="book-author" id="book-author"
-                                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
-                                                x-model="book.author">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex-shrink-0 border-t border-gray-200 p-4 mt-6">
-                                <div class="flex justify-end space-x-3">
-                                    <button type="button"
-                                        class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-                                        @click="closeAddBook()">
-                                        Cancel
-                                    </button>
-                                    <button type="button"
-                                        class="inline-flex justify-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-                                        @click="addBook()">
-                                        Create
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="relative z-10" aria-labelledby="slide-over-edit-book" role="dialog" aria-modal="true"
-            x-show="openEdit" style="display: none;">
-            <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
-
-            <div class="fixed inset-0 z-10 overflow-y-auto">
-                <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-                    <div
-                        class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:w-full sm:max-w-md">
-                        <form class="flex h-full flex-col">
-                            <div class="flex-1">
-                                <div class="bg-gray-50 p-4">
-                                    <div class="flex items-start justify-between space-x-3">
-                                        <div class="space-y-1">
-                                            <h2 class="text-lg font-semibold leading-6 text-gray-900">Edit Book</h2>
-                                        </div>
-                                        <div class="flex h-7 items-center">
-                                            <button type="button" class="relative text-gray-400 hover:text-gray-500"
-                                                @click="closeEditBook()">
-                                                <span class="absolute -inset-2.5"></span>
-                                                <span class="sr-only">Close panel</span>
-                                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                                    stroke="currentColor" aria-hidden="true">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        d="M6 18L18 6M6 6l12 12" />
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="space-y-3 py-6 sm:space-y-0 sm:py-0">
-                                    <div class="space-y-2 px-4 sm:grid sm:gap-4 sm:space-y-0 sm:px-4 sm:py-2">
-                                        <div>
-                                            <label for="book-name"
-                                                class="block text-sm font-medium leading-6 text-gray-900 sm:mt-1.5">Name</label>
-                                        </div>
-                                        <div class="sm:col-span-2">
-                                            <input type="text" name="book-name" id="book-name"
-                                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
-                                                x-model="selectedBook.name">
-                                        </div>
-                                    </div>
-
-                                    <div class="space-y-2 px-4 sm:grid sm:gap-4 sm:space-y-0 sm:px-4 sm:py-2">
-                                        <div>
-                                            <label for="book-author"
-                                                class="block text-sm font-medium leading-6 text-gray-900 sm:mt-1.5">Author</label>
-                                        </div>
-                                        <div class="sm:col-span-2">
-                                            <input type="text" name="book-author" id="book-author"
-                                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
-                                                x-model="selectedBook.author">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex-shrink-0 border-t border-gray-200 p-4 mt-6">
-                                <div class="flex justify-end space-x-3">
-                                    <button type="button"
-                                        class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-                                        @click="closeEditBook()">
-                                        Cancel
-                                    </button>
-                                    <button type="button"
-                                        class="inline-flex justify-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-                                        @click="updateBook()">
-                                        Save
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </main>
     <script src="//unpkg.com/alpinejs" defer></script>
-    <script src="/public/app.js"></script>
+    <script src="/public/assets/js/app.js"></script>
 </body>
 
 </html>

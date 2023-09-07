@@ -7,15 +7,16 @@
     "format": "bun run biome format **/*.ts --write"
   },
   "dependencies": {
+    "@elysiajs/cors": "^0.6.0",
     "@elysiajs/html": "^0.6.0",
     "@elysiajs/static": "^0.6.0",
-    "@elysiajs/swagger": "^0.6.0",
-    "elysia": "^0.6.10",
+    "@elysiajs/swagger": "^0.6.1",
+    "elysia": "^0.6.17",
     "mitata": "^0.1.6",
     "typed-html": "^3.0.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.0.0",
+    "@biomejs/biome": "^1.1.1",
     "bun-types": "^0.7.3"
   }
 }
