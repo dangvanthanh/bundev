@@ -11,7 +11,7 @@
     "@elysiajs/html": "^0.6.5",
     "@elysiajs/static": "^0.6.0",
     "@elysiajs/swagger": "^0.6.2",
-    "elysia": "^0.6.22",
+    "elysia": "^0.6.23",
     "mitata": "^0.1.6",
     "typed-html": "^3.0.1"
   },
