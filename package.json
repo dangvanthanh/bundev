@@ -1,14 +1,16 @@
 {
   "name": "bundev",
   "scripts": {
-    "dev": "bun run --watch src/index.ts",
+    "prepare": "panda codegen",
+    "css:dev": "panda --watch",
+    "dev": "concurrently \"bun run --watch src/index.ts\" \"bun run css:dev\"",
     "bench": "bun run src/bench.ts",
     "lint": "bun run biome check **/*.ts",
     "format": "bun run biome format **/*.ts --write"
   },
   "dependencies": {
     "@elysiajs/cors": "^0.6.0",
-    "@elysiajs/html": "^0.6.5",
+    "@elysiajs/html": "^0.6.6",
     "@elysiajs/static": "^0.6.0",
     "@elysiajs/swagger": "^0.6.2",
     "elysia": "^0.6.23",
@@ -16,7 +18,10 @@
     "typed-html": "^3.0.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.1.2",
-    "bun-types": "^0.7.3"
+    "@biomejs/biome": "^1.2.2",
+    "@pandacss/dev": "^0.15.0",
+    "@types/react": "^18.2.21",
+    "bun-types": "^0.7.3",
+    "concurrently": "^8.2.1"
   }
 }
