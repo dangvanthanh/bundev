@@ -1,0 +1,30 @@
+@layer utilities {
+
+  .bg_linear-gradient\(to_right\,_\#3a1c71\,_\#d76d77\,_\#ffaf7b\) {
+    background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b)
+    }
+
+  .d_flex {
+    display: flex
+    }
+
+  .h_100vh {
+    height: 100vh
+    }
+
+  .justify_center {
+    justify-content: center
+    }
+
+  .items_center {
+    align-items: center
+    }
+
+  .m_0 {
+    margin: var(--spacing-0)
+    }
+
+  .font_Poppins\,_sans-serif {
+    font-family: Poppins, sans-serif
+    }
+}
