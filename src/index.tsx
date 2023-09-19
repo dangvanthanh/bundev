@@ -4,6 +4,7 @@ import staticPlugin from '@elysiajs/static';
 import { Elysia } from 'elysia';
 import * as elements from 'typed-html';
 import { css } from '../styled-system/css';
+import { Button } from './components/Button';
 import { Card } from './components/Card';
 import { Layout } from './components/Layout';
 
@@ -32,6 +33,12 @@ const app = new Elysia()
       </Layout>,
     ),
   )
+  .post('/clicked', () => {
+    return <Button hx-post="/re-clicked" hx-swap="outerHTML" color="red.600" />;
+  })
+  .post('/re-clicked', () => {
+    return <Button hx-post="/clicked" hx-swap="outerHTML" color="yellow.600" />;
+  })
   .get('/styles.css', () => Bun.file('./styled-system/styles.css'))
   .get('/reset.css', () => Bun.file('./styled-system/reset.css'))
   .get('/global.css', () => Bun.file('./styled-system/global.css'))

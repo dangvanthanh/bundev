@@ -27,4 +27,16 @@
   .font_Poppins\,_sans-serif {
     font-family: Poppins, sans-serif
     }
+
+  .cursor_pointer {
+    cursor: pointer
+    }
+
+  .text_red\.600 {
+    color: var(--colors-red-600)
+    }
+
+  .text_yellow\.600 {
+    color: var(--colors-yellow-600)
+    }
 }

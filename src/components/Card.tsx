@@ -1,5 +1,6 @@
 import * as elements from 'typed-html';
 import { css } from '../../styled-system/css';
+import { Button } from './Button';
 
 export const Card = () => {
   return (
@@ -24,9 +25,7 @@ export const Card = () => {
       >
         Having fun with <span class={css({ color: 'blue.600' })}>panda</span> +{' '}
         <span class={css({ color: 'green.600' })}>htmx</span> +{' '}
-        <a href="/chat" class={css({ color: 'yellow.600' })}>
-          ai
-        </a>
+        <Button hx-post="/clicked" hx-swap="outerHTML" color="yellow.600" />
       </h1>
     </div>
   );

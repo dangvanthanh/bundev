@@ -1,0 +1,6 @@
+@layer utilities {
+
+  .cursor_pointer {
+    cursor: pointer
+    }
+}

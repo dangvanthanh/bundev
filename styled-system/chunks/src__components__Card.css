@@ -60,6 +60,10 @@
     text-align: center
     }
 
+  .text_red\.600 {
+    color: var(--colors-red-600)
+    }
+
   .text_primary {
     color: primary
     }
