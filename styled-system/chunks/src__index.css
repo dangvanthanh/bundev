@@ -1,5 +1,9 @@
 @layer utilities {
 
+  .bg_gray\.100 {
+    background: var(--colors-gray-100)
+    }
+
   .bg_linear-gradient\(to_right\,_\#3a1c71\,_\#d76d77\,_\#ffaf7b\) {
     background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b)
     }
@@ -38,5 +42,17 @@
 
   .text_yellow\.600 {
     color: var(--colors-yellow-600)
+    }
+
+  .bg_red\.600 {
+    background: var(--colors-red-600)
+    }
+
+  .bg_yellow\.600 {
+    background: var(--colors-yellow-600)
+    }
+
+  .bg_green\.600 {
+    background: var(--colors-green-600)
     }
 }

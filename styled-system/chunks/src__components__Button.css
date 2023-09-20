@@ -1,6 +1,38 @@
 @layer utilities {
 
+  .bg_gray\.700 {
+    background: var(--colors-gray-700)
+    }
+
+  .px_2 {
+    padding-inline: var(--spacing-2)
+    }
+
+  .rounded_sm {
+    border-radius: var(--radii-sm)
+    }
+
+  .w_8 {
+    width: var(--sizes-8)
+    }
+
+  .h_8 {
+    height: var(--sizes-8)
+    }
+
   .cursor_pointer {
     cursor: pointer
+    }
+
+  .text_white {
+    color: var(--colors-white)
+    }
+
+  .w_4 {
+    width: var(--sizes-4)
+    }
+
+  .h_4 {
+    height: var(--sizes-4)
     }
 }

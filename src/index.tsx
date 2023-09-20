@@ -5,7 +5,7 @@ import { Elysia } from 'elysia';
 import * as elements from 'typed-html';
 import { css } from '../styled-system/css';
 import { Button } from './components/Button';
-import { Card } from './components/Card';
+import { Chat } from './components/Chat';
 import { Layout } from './components/Layout';
 
 const app = new Elysia()
@@ -19,25 +19,22 @@ const app = new Elysia()
       <Layout>
         <body
           class={css({
-            background: 'linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b)',
             display: 'flex',
             height: '100vh',
-            justifyContent: 'center',
-            alignItems: 'center',
             margin: 0,
-            fontFamily: 'Poppins, sans-serif',
+            bg: 'gray.100'
           })}
         >
-          <Card />
+          <Chat />
         </body>
       </Layout>,
     ),
   )
   .post('/clicked', () => {
-    return <Button hx-post="/re-clicked" hx-swap="outerHTML" color="red.600" />;
+    return <Button hx-post="/re-clicked" hx-swap="outerHTML" bg="yellow.600" />;
   })
   .post('/re-clicked', () => {
-    return <Button hx-post="/clicked" hx-swap="outerHTML" color="yellow.600" />;
+    return <Button hx-post="/clicked" hx-swap="outerHTML" bg="green.600" />;
   })
   .get('/styles.css', () => Bun.file('./styled-system/styles.css'))
   .get('/reset.css', () => Bun.file('./styled-system/reset.css'))

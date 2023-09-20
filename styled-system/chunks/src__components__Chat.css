@@ -1,44 +1,11 @@
-@layer reset, base, tokens, recipes, utilities;
-
-@import './reset.css';
-
-@import './global.css';
-
-@import './tokens/index.css';
-
-@import './tokens/keyframes.css';
-
 @layer utilities {
-  .bg_red {
-    background: red
-    }
-
-  .bg_\#FFF {
-    background: #FFF
-    }
-
-  .text_\#d76d77 {
-    color: #d76d77
-    }
-
-  .text_red {
-    color: red
-    }
-
-  .text_gray\.400 {
-    color: var(--colors-gray-400)
-    }
-
-  .text_\#3a1c71 {
-    color: #3a1c71
-    }
-
-  .text_center {
-    text-align: center
-    }
 
   .max-h_calc\(100vh_-_100px\) {
     max-height: calc(100vh - 100px)
+    }
+
+  .pos_relative {
+    position: relative
     }
 
   .w_312 {
@@ -71,6 +38,10 @@
 
   .text_blue\.600 {
     color: var(--colors-blue-600)
+    }
+
+  .text_yellow\.600 {
+    color: var(--colors-yellow-600)
     }
 
   .overflow_auto {
@@ -141,6 +112,10 @@
     max-height: 60px
     }
 
+  .items_center {
+    align-items: center
+    }
+
   .shadow_xs {
     box-shadow: var(--shadows-xs)
     }
@@ -189,8 +164,40 @@
     margin-right: var(--spacing-2)
     }
 
+  .bg_gray\.700 {
+    background: var(--colors-gray-700)
+    }
+
   .px_2 {
     padding-inline: var(--spacing-2)
+    }
+
+  .rounded_sm {
+    border-radius: var(--radii-sm)
+    }
+
+  .w_8 {
+    width: var(--sizes-8)
+    }
+
+  .h_8 {
+    height: var(--sizes-8)
+    }
+
+  .cursor_pointer {
+    cursor: pointer
+    }
+
+  .text_white {
+    color: var(--colors-white)
+    }
+
+  .w_4 {
+    width: var(--sizes-4)
+    }
+
+  .h_4 {
+    height: var(--sizes-4)
     }
 
   .text_green\.600 {
@@ -215,6 +222,10 @@
 
   .mx_auto {
     margin-inline: auto
+    }
+
+  .bg_white {
+    background: var(--colors-white)
     }
 
   .border-top-style_solid {
@@ -266,6 +277,10 @@
     border-radius: var(--radii-lg)
     }
 
+  .flex_1 {
+    flex: 1 1 0%
+    }
+
   .w_full {
     width: var(--sizes-full)
     }
@@ -290,6 +305,14 @@
     resize: none
     }
 
+  .bg_green\.600 {
+    background: var(--colors-green-600)
+    }
+
+  .d_flex {
+    display: flex
+    }
+
   .flex_column {
     flex-direction: column
     }
@@ -301,144 +324,7 @@
   .h_screen {
     height: 100vh
     }
-
-  .text_gray\.700 {
-    color: var(--colors-gray-700)
-    }
-
-  .mt_2 {
-    margin-top: var(--spacing-2)
-    }
-
-  .rounded_xs {
-    border-radius: var(--radii-xs)
-    }
-
-  .mb_4 {
-    margin-bottom: var(--spacing-4)
-    }
-
-  .text_white {
-    color: var(--colors-white)
-    }
-
-  .w_4 {
-    width: var(--sizes-4)
-    }
-
-  .h_4 {
-    height: var(--sizes-4)
-    }
-
-  .flex_1 {
-    flex: 1 1 0%
-    }
-
-  .ml_4 {
-    margin-left: var(--spacing-4)
-    }
-
-  .text_gray\.600 {
-    color: var(--colors-gray-600)
-    }
-
-  .items_start {
-    align-items: start
-    }
-
-  .mb_6 {
-    margin-bottom: var(--spacing-6)
-    }
-
-  .pos_relative {
-    position: relative
-    }
-
-  .bg_white {
-    background: var(--colors-white)
-    }
-
-  .bg_gray\.700 {
-    background: var(--colors-gray-700)
-    }
-
-  .w_8 {
-    width: var(--sizes-8)
-    }
-
-  .h_8 {
-    height: var(--sizes-8)
-    }
-
-  .shadow_sm {
-    box-shadow: var(--shadows-sm)
-    }
-
-  .rounded_sm {
-    border-radius: var(--radii-sm)
-    }
-
-  .mt_1 {
-    margin-top: var(--spacing-1)
-    }
-
-  .bg_gray\.100 {
-    background: var(--colors-gray-100)
-    }
-
-  .bg_linear-gradient\(to_right\,_\#3a1c71\,_\#d76d77\,_\#ffaf7b\) {
-    background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b)
-    }
-
-  .d_flex {
-    display: flex
-    }
-
-  .h_100vh {
-    height: 100vh
-    }
-
-  .justify_center {
-    justify-content: center
-    }
-
-  .items_center {
-    align-items: center
-    }
-
-  .m_0 {
-    margin: var(--spacing-0)
-    }
-
-  .font_Poppins\,_sans-serif {
-    font-family: Poppins, sans-serif
-    }
-
-  .cursor_pointer {
-    cursor: pointer
-    }
-
-  .text_red\.600 {
-    color: var(--colors-red-600)
-    }
-
-  .text_yellow\.600 {
-    color: var(--colors-yellow-600)
-    }
-
-  .bg_red\.600 {
-    background: var(--colors-red-600)
-    }
-
-  .bg_yellow\.600 {
-    background: var(--colors-yellow-600)
-    }
-
-  .bg_green\.600 {
-    background: var(--colors-green-600)
-    }
-
-  .\[\&\:focus\]\:ring_none:focus {
-    outline: var(--borders-none)
+    .\[\&\:focus\]\:ring_none:focus {
+      outline: var(--borders-none)
         }
 }

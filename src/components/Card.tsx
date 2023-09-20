@@ -25,7 +25,7 @@ export const Card = () => {
       >
         Having fun with <span class={css({ color: 'blue.600' })}>panda</span> +{' '}
         <span class={css({ color: 'green.600' })}>htmx</span> +{' '}
-        <Button hx-post="/clicked" hx-swap="outerHTML" color="yellow.600" />
+        <Button hx-post="/clicked" hx-swap="outerHTML" bg="yellow.600" />
       </h1>
     </div>
   );
