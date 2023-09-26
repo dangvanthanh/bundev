@@ -135,3 +135,6 @@ dist
 # bun
 **/*.bun
 **/*.buchta
+
+# pandacss
+styled-system
