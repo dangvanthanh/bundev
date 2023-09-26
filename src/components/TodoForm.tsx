@@ -7,7 +7,7 @@ export const TodoForm = () => {
     <form
       class={flex({
         flexDirection: 'row',
-        mb: '3'
+        mb: '3',
       })}
       hx-post="/todos"
       hx-swap="afterend"
@@ -21,7 +21,7 @@ export const TodoForm = () => {
           borderWidth: '1px',
           borderColor: 'gray.200',
           rounded: 'sm',
-          overflow: 'hidden'
+          overflow: 'hidden',
         })}
       >
         <input
@@ -34,7 +34,9 @@ export const TodoForm = () => {
             flex: '1 1 0%',
           })}
         />
-        <button type="submit" class={css({
+        <button
+          type="submit"
+          class={css({
             bg: 'gray.700',
             display: 'inline-flex',
             alignItems: 'center',
@@ -42,7 +44,10 @@ export const TodoForm = () => {
             py: 1.5,
             px: 3,
             color: 'white',
-        })}>Add</button>
+          })}
+        >
+          Add
+        </button>
       </div>
     </form>
   );

@@ -1,13 +1,18 @@
+import { eq } from 'drizzle-orm';
 import { bench, run } from 'mitata';
-import { Database } from 'bun:sqlite';
+import { db } from './db';
+import { todos } from './db/schema';
 
-const db = Database.open('./books.sqlite');
+const todoIdStart = 1;
+const todoIdEnd = 100;
+const todoIds = Array.from({ length: todoIdEnd - todoIdStart }, (_, i) => i + todoIdStart);
 
-{
-  const sql = db.prepare(`SELECT * FROM "books"`);
-  bench(`SELECT * FROM "books"`, () => {
-    sql.all();
-  });
-}
+bench('Todos: getAll', () => async () => await db.select().from(todos).all());
+
+bench('Todos: getById', () => async () => {
+  for (const id of todoIds) {
+    await db.select().from(todos).where(eq(todos.id, id));
+  }
+});
 
 await run();

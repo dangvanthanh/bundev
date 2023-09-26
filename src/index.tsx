@@ -11,12 +11,12 @@ import { TodoList } from './components/TodoList';
 import { db } from './db';
 import { todos } from './db/schema';
 
+const port = process.env.PORT || 3000;
+
 const app = new Elysia()
   .use(cors())
   .use(staticPlugin())
-  // @ts-expect-error https://github.com/elysiajs/elysia/issues/94
   .use(html())
-  // @ts-expect-error
   .get('/', ({ html }) =>
     html(
       <Layout>
@@ -83,7 +83,7 @@ const app = new Elysia()
   .get('/global.css', () => Bun.file('./styled-system/global.css'))
   .get('/tokens/index.css', () => Bun.file('./styled-system/tokens/index.css'))
   .get('/tokens/keyframes.css', () => Bun.file('./styled-system/tokens/keyframes.css'))
-  .listen(3000);
+  .listen(port);
 
 console.log(`🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`);
 

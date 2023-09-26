@@ -1,27 +1,31 @@
 {
   "name": "bundev",
+  "module": "src/index.tsx",
+  "type": "module",
   "scripts": {
-    "prepare": "panda codegen",
+    "db:push": "bunx drizzle-kit push:sqlite",
+    "db:studio": "bunx drizzle-kit studio",
     "css:dev": "panda --watch",
     "dev": "concurrently \"bun run --watch src/index.tsx\" \"bun run css:dev\"",
     "bench": "bun run src/bench.ts",
-    "lint": "bun run biome check **/*.{ts,tsx}",
-    "format": "bun run biome format **/*.{ts,tsx} --write"
+    "lint": "bunx biome check ./src/**/*.{ts,tsx}",
+    "format": "bunx biome format ./src/**/*.{ts,tsx} --write"
   },
   "dependencies": {
-    "@elysiajs/cors": "^0.6.0",
-    "@elysiajs/html": "^0.6.6",
-    "@elysiajs/static": "^0.6.0",
+    "@elysiajs/cors": "^0.7.0",
+    "@elysiajs/html": "^0.7.0",
+    "@elysiajs/static": "^0.7.1",
     "@libsql/client": "^0.3.5",
     "better-sqlite3": "^8.6.0",
     "drizzle-orm": "^0.28.6",
-    "elysia": "^0.6.24"
+    "elysia": "^0.7.14"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.2.2",
+    "@flydotio/dockerfile": "^0.4.10",
     "@pandacss/dev": "^0.15.0",
     "@types/react": "^18.2.21",
-    "bun-types": "^0.7.3",
+    "bun-types": "^1.0.3",
     "concurrently": "^8.2.1",
     "drizzle-kit": "^0.19.13",
     "mitata": "^0.1.6",

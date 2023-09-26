@@ -7,4 +7,4 @@ export const todos = sqliteTable('todos', {
   completed: integer('completed', { mode: 'boolean' }).notNull().default(false),
 });
 
-export type Todo = InferSelectModel<typeof todos>
+export type Todo = InferSelectModel<typeof todos>;

@@ -2,6 +2,15 @@
 
 > Experiencing with Bun
 
+## Getting Started
+
+Create `.env` in root of this project. Add the database url and database auth token for the database used in [Turso](https://turso.tech/).  
+
+```
+DATABASE_URL=""
+DATABASE_AUTH_TOKEN=""
+```
+
 ## Technologies
 
 - [Bun](https://bun.sh/)
