@@ -1,5 +1,4 @@
-import * as elements from 'typed-html';
-import { css } from '../../styled-system/css';
+import { css } from '@styled-system/css';
 import { Todo } from '../db/schema';
 import { TodoForm } from './TodoForm';
 import { TodoItem } from './TodoItem';

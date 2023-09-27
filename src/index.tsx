@@ -1,10 +1,9 @@
 import cors from '@elysiajs/cors';
 import { html } from '@elysiajs/html';
 import staticPlugin from '@elysiajs/static';
+import { css } from '@styled-system/css';
 import { eq } from 'drizzle-orm';
 import { Elysia, t } from 'elysia';
-import * as elements from 'typed-html';
-import { css } from '../styled-system/css';
 import { Layout } from './components/Layout';
 import { TodoItem } from './components/TodoItem';
 import { TodoList } from './components/TodoList';

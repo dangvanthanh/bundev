@@ -1,5 +1,4 @@
-import * as elements from 'typed-html';
-import { css } from '../../styled-system/css';
+import { css } from '@styled-system/css';
 
 export const Button = ({ bg, ...rest }: { bg: string }) => {
   return (

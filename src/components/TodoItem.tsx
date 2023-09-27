@@ -1,54 +1,84 @@
-import * as elements from 'typed-html';
-import { css } from '../../styled-system/css';
-import { flex } from '../../styled-system/patterns';
+import { css } from '@styled-system/css';
+import { flex } from '@styled-system/patterns';
 import { Todo } from '../db/schema';
 
 export const TodoItem = ({ content, completed, id }: Todo) => {
   return (
-    <article class={flex({ flexDirection: 'row', py: 1.5 })}>
+    <article class={flex({ flexDirection: 'row', py: 1.5, px: 1 })}>
       <div
         class={css({
           display: 'flex',
+          alignItems: 'center',
           flex: '1 1 0%',
-          columnGap: 1,
-          rowGap: 2,
+          columnGap: 2,
+          rowGap: 2
         })}
       >
-        <div class={css({ w: 6, h: 6, pos: 'relative' })}>
-          <input
-            type="checkbox"
-            checked={completed}
-            class={css({
-              bg: 'white',
-              w: 4,
-              h: 4,
-              mt: 1,
-              border: '1px',
-              borderColor: 'violet.500',
-              borderStyle: 'solid',
-              borderRadius: 'sm',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              boxShadow: '0 2px 2px #a78bfa',
-            })}
-            hx-post={`/todos/toggle/${id}`}
-            hx-swap="outerHTML"
-            hx-target="closest article"
-          />
-        </div>
-        <div
+        <input
+          id={`${id}`}
+          type="checkbox"
+          checked={completed}
+          class={css({
+            appearance: 'none',
+            position: 'relative',
+            w: 4,
+            h: 4,
+            outline: 'none',
+            border: 0,
+            cursor: 'pointer',
+            display: 'grid',
+            alignItems: 'center',
+            mt: 1,
+            overflow: 'hidden',
+            _before: {
+              content: '""',
+              position: 'absolute',
+              height: '2px',
+              top: 'auto',
+              background: 'violet.700',
+              borderRadius: 'xs',
+              width: '2',
+              right: '60%',
+              transformOrigin: 'right bottom',
+            },
+            _after: {
+              content: '""',
+              position: 'absolute',
+              height: '2px',
+              top: 'auto',
+              background: 'violet.700',
+              borderRadius: 'xs',
+              width: '2',
+              left: '40%',
+              transformOrigin: 'left bottom',
+            },
+            _checked: {
+              _before: {
+                animation: 'checkBefore .4s ease forwards',
+              },
+              _after: {
+                animation: 'checkAfter .4s ease forwards',
+              },
+            },
+          })}
+          hx-post={`/todos/toggle/${id}`}
+          hx-swap="outerHTML"
+          hx-target="closest article"
+        />
+        <label
+          for={`${id}`}
           class={css({
             flex: '1 1 0%',
+            cursor: 'pointer'
           })}
         >
           {content}
-        </div>
+        </label>
       </div>
 
       <button
         type="button"
-        class={css({ color: 'gray.500', cursor: 'pointer' })}
+        class={css({ color: 'violet.500', fontWeight: '500', cursor: 'pointer' })}
         hx-delete={`/todos/${id}`}
         hx-swap="outerHTML"
         hx-target="closest article"

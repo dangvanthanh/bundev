@@ -1,6 +1,5 @@
-import * as elements from 'typed-html';
-import { css } from '../../styled-system/css';
-import { flex } from '../../styled-system/patterns';
+import { css } from '@styled-system/css';
+import { flex } from '@styled-system/patterns';
 
 export const TodoForm = () => {
   return (
@@ -27,23 +26,27 @@ export const TodoForm = () => {
         <input
           type="text"
           name="content"
-          placeholder="Create new task"
+          placeholder="Create new task..."
           class={css({
             px: 3,
             py: 1.5,
             flex: '1 1 0%',
+            _placeholder: {
+              color: 'gray.500'
+            }
           })}
         />
         <button
           type="submit"
           class={css({
-            bg: 'gray.700',
+            bg: 'violet.600',
             display: 'inline-flex',
             alignItems: 'center',
             justifyContent: 'center',
             py: 1.5,
             px: 3,
             color: 'white',
+            cursor: 'pointer'
           })}
         >
           Add

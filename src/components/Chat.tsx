@@ -1,6 +1,5 @@
-import * as elements from 'typed-html';
-import { css } from '../../styled-system/css';
-import { flex } from '../../styled-system/patterns';
+import { css } from '@styled-system/css';
+import { flex } from '@styled-system/patterns';
 import { Button } from './Button';
 import { ChatMessage } from './ChatMessage';
 

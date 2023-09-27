@@ -18,7 +18,7 @@ DATABASE_AUTH_TOKEN=""
 - [Turso](https://turso.tech/)
 - [Htmx](https://htmx.org/)
 - [Hyperscript](https://hyperscript.org/)
-- [Typed-html](https://github.com/nicojs/typed-html)
+- [Kitajs Html](https://github.com/kitajs/html)
 - [PandaCSS](https://panda-css.com/)
 - [Vercel AI SDK](https://sdk.vercel.ai/docs)
 - [Biome](https://biomejs.dev)

@@ -12,7 +12,56 @@ export default defineConfig({
 
   // Useful for theme customization
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        checkBefore: {
+          '0%': {
+            width: '4px',
+            top: 'auto',
+            transform: 'rotate(0)'
+          },
+          '50%': {
+            width: 0,
+            top: 'auto',
+            transform: 'rotate(0)'
+           
+          },
+          '51%': {
+            width: 0,
+            top: '8px',
+            transform: 'rotate(45deg)'
+          },
+          '100%': {
+            width: '5px',
+            top: '8px',
+            transform: 'rotate(45deg)'
+          }
+        },
+        checkAfter: {
+          '0%': {
+            width: '4px',
+            top: 'auto',
+            transform: 'rotate(0)'
+          },
+          '50%': {
+            width: 0,
+            top: 'auto',
+            transform: 'rotate(0)'
+           
+          },
+          '51%': {
+            width: 0,
+            top: '8px',
+            transform: 'rotate(-45deg)'
+          },
+          '100%': {
+            width: '10px',
+            top: '8px',
+            transform: 'rotate(-45deg)'
+          }
+        }
+      }
+    },
   },
 
   // The output directory for your css system
