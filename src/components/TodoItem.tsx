@@ -11,7 +11,9 @@ export const TodoItem = ({ content, completed, id }: Todo) => {
           alignItems: 'center',
           flex: '1 1 0%',
           columnGap: 2,
-          rowGap: 2
+          rowGap: 2,
+          textDecoration: completed ? 'line-through' : 'none',
+          color: completed ? 'gray.400' : 'violet.800',
         })}
       >
         <input
@@ -36,7 +38,6 @@ export const TodoItem = ({ content, completed, id }: Todo) => {
               height: '2px',
               top: 'auto',
               background: 'violet.700',
-              borderRadius: 'xs',
               width: '2',
               right: '60%',
               transformOrigin: 'right bottom',
@@ -47,7 +48,6 @@ export const TodoItem = ({ content, completed, id }: Todo) => {
               height: '2px',
               top: 'auto',
               background: 'violet.700',
-              borderRadius: 'xs',
               width: '2',
               left: '40%',
               transformOrigin: 'left bottom',
@@ -69,7 +69,18 @@ export const TodoItem = ({ content, completed, id }: Todo) => {
           for={`${id}`}
           class={css({
             flex: '1 1 0%',
-            cursor: 'pointer'
+            cursor: 'pointer',
+            pos: 'relative',
+            _after: {
+              content: '""',
+              position: 'absolute',
+              height: '4px',
+              width: '4px',
+              top: '12px',
+              left: '-18px',
+              borderRadius: '50%',
+              animation: 'firework .5s ease forwards .1s',
+            },
           })}
         >
           {content}

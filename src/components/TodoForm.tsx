@@ -32,8 +32,8 @@ export const TodoForm = () => {
             py: 1.5,
             flex: '1 1 0%',
             _placeholder: {
-              color: 'gray.500'
-            }
+              color: 'gray.500',
+            },
           })}
         />
         <button
@@ -46,7 +46,7 @@ export const TodoForm = () => {
             py: 1.5,
             px: 3,
             color: 'white',
-            cursor: 'pointer'
+            cursor: 'pointer',
           })}
         >
           Add
