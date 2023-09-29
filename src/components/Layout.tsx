@@ -14,7 +14,11 @@ export const Layout = ({ children }: Html.PropsWithChildren) => {
         <link href="/tokens/index.css" rel="stylesheet" />
         <link href="/tokens/keyframes.css" rel="stylesheet" />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <script src="https://unpkg.com/lucide@latest" />
+        <script src="/public/js/script.js" />
+      </body>
     </html>
   );
 };

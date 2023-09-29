@@ -1,6 +1,8 @@
 import { html } from '@elysiajs/html';
 import { css } from '@styled-system/css';
+import { eq } from 'drizzle-orm';
 import { Elysia, t } from 'elysia';
+import { Breadcrumb } from '../components/Breadcrumb';
 import { Layout } from '../components/Layout';
 import { TodoItem } from '../components/TodoItem';
 import { TodoList } from '../components/TodoList';
@@ -9,7 +11,7 @@ import { todos } from '../db/schema';
 
 export const tasks = new Elysia()
   .use(html())
-  .get('/', ({ html }) =>
+  .get('/tasks', ({ html }) =>
     html(
       <Layout>
         <body
@@ -19,6 +21,7 @@ export const tasks = new Elysia()
             bg: 'gray.200',
           })}
         >
+          <Breadcrumb text="Tasks" />
           <div hx-get="/todos" hx-swap="innerHTML" hx-trigger="load" />
         </body>
       </Layout>,
