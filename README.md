@@ -20,6 +20,7 @@ DATABASE_AUTH_TOKEN=""
 - [Hyperscript](https://hyperscript.org/)
 - [Kitajs Html](https://github.com/kitajs/html)
 - [PandaCSS](https://panda-css.com/)
+- [Drizzle ORM](https://orm.drizzle.team/)
 - [Vercel AI SDK](https://sdk.vercel.ai/docs)
 - [Biome](https://biomejs.dev)
 

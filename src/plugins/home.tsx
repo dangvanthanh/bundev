@@ -1,11 +1,13 @@
+import { Layout } from '@/layouts';
 import { html } from '@elysiajs/html';
 import { css } from '@styled-system/css';
 import { flex, grid } from '@styled-system/patterns';
 import { Elysia } from 'elysia';
-import { Layout } from '../components/Layout';
 
-export const home = new Elysia().use(html()).get('/', ({ html }) =>
-  html(
+export const home = new Elysia().use(html()).get('/', ({ html }) => {
+  const frontend = ['HTMX', 'Alpine.js', 'PandaCSS'];
+
+  return html(
     <Layout>
       <body
         class={css({
@@ -26,7 +28,12 @@ export const home = new Elysia().use(html()).get('/', ({ html }) =>
               },
             })}
           >
-            Experience with Bun, Elysiajs, Turso and <span>HTMX</span>
+            Experience with Bun, Elysiajs, Turso and{' '}
+            <span class={css({ pos: 'relative', display: 'inline-flex' })}>
+              {frontend.slice(0, 1).map((fe) => (
+                <span>{fe}</span>
+              ))}
+            </span>
           </h1>
 
           <div class={css({ maxW: '2xl', py: 16, mx: 'auto' })}>
@@ -79,5 +86,5 @@ export const home = new Elysia().use(html()).get('/', ({ html }) =>
         </div>
       </body>
     </Layout>,
-  ),
-);
+  );
+});

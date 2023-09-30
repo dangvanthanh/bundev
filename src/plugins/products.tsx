@@ -1,8 +1,8 @@
+import { Breadcrumb } from '@/components';
+import { Layout } from '@/layouts';
 import { html } from '@elysiajs/html';
 import { css } from '@styled-system/css';
 import { Elysia, t } from 'elysia';
-import { Breadcrumb } from '../components/Breadcrumb';
-import { Layout } from '../components/Layout';
 
 export const products = new Elysia().use(html()).get('/products', ({ html }) =>
   html(

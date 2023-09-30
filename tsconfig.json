@@ -21,6 +21,7 @@
       "bun-types" // add Bun global
     ],
     "paths": {
+      "@/*": ["./src/*"],
       "@styled-system/*": ["./styled-system/*"]
     }
   }

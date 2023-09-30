@@ -1,13 +1,11 @@
+import { Breadcrumb,  TodoItem, TodoList } from '@/components';
+import { db } from '@/db';
+import { todos } from '@/db/schema';
+import { Layout } from '@/layouts';
 import { html } from '@elysiajs/html';
 import { css } from '@styled-system/css';
 import { eq } from 'drizzle-orm';
 import { Elysia, t } from 'elysia';
-import { Breadcrumb } from '../components/Breadcrumb';
-import { Layout } from '../components/Layout';
-import { TodoItem } from '../components/TodoItem';
-import { TodoList } from '../components/TodoList';
-import { db } from '../db';
-import { todos } from '../db/schema';
 
 export const tasks = new Elysia()
   .use(html())
