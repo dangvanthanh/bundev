@@ -22,7 +22,7 @@ export const products = new Elysia().use(html()).get('/products', ({ html }) =>
               borderRadius: 'sm',
               px: 2,
               py: 24,
-              textAlign: 'center'
+              textAlign: 'center',
             })}
           >
             <h3>Coming soon...</h3>

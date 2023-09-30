@@ -1,4 +1,4 @@
-import { Breadcrumb,  TodoItem, TodoList } from '@/components';
+import { Breadcrumb, TodoItem, TodoList } from '@/components';
 import { db } from '@/db';
 import { todos } from '@/db/schema';
 import { Layout } from '@/layouts';

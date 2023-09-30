@@ -1,6 +1,6 @@
+import { Todo } from '@/db/schema';
 import { css } from '@styled-system/css';
 import { flex } from '@styled-system/patterns';
-import { Todo } from '../db/schema';
 
 export const TodoItem = ({ content, completed, id }: Todo) => {
   return (
