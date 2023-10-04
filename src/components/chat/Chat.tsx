@@ -1,6 +1,6 @@
 import { css } from '@styled-system/css';
 import { flex } from '@styled-system/patterns';
-import { Button } from './Button';
+import { ChatButton } from './ChatButton';
 import { ChatMessage } from './ChatMessage';
 
 export const Chat = () => {
@@ -94,7 +94,7 @@ export const Chat = () => {
                   placeholder="Send a message"
                 />
               </div>
-              <Button hx-post="/clicked" hx-swap="outerHTML" bg="green.600" />
+              <ChatButton hx-post="/clicked" hx-swap="outerHTML" bg="green.600" />
             </div>
           </div>
         </div>

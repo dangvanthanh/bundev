@@ -1,6 +1,6 @@
 import { css } from '@styled-system/css';
 
-export const Button = ({ bg, ...rest }: { bg: string }) => {
+export const ChatButton = ({ bg, ...rest }: { bg: string }) => {
   return (
     <button
       type="button"

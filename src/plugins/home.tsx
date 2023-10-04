@@ -1,3 +1,4 @@
+import { Card } from '@/components';
 import { Layout } from '@/layouts';
 import { html } from '@elysiajs/html';
 import { css } from '@styled-system/css';
@@ -6,6 +7,10 @@ import { Elysia } from 'elysia';
 
 export const home = new Elysia().use(html()).get('/', ({ html }) => {
   const frontend = ['HTMX', 'Alpine.js', 'PandaCSS'];
+  const cards = [
+    { url: '/tasks', image: '/public/assets/tasks.png', text: '#tasks' },
+    { url: '/products', image: '/public/assets/tasks.png', text: '#products' },
+  ];
 
   return html(
     <Layout>
@@ -43,44 +48,9 @@ export const home = new Elysia().use(html()).get('/', ({ html }) => {
                 gap: 4,
               })}
             >
-              <div
-                class={css({
-                  bg: 'white',
-                  rounded: 'md',
-                  p: 2,
-                })}
-              >
-                <a href="/tasks" class={flex({ h: 'full', direction: 'column' })}>
-                  <img src="/public/assets/tasks.png" alt="" />
-                  <h3
-                    class={css({
-                      mt: 5,
-                      color: 'gray.400',
-                    })}
-                  >
-                    #tasks
-                  </h3>
-                </a>
-              </div>
-              <div
-                class={css({
-                  bg: 'white',
-                  rounded: 'md',
-                  p: 2,
-                })}
-              >
-                <a href="/products" class={flex({ h: 'full', direction: 'column' })}>
-                  <img src="/public/assets/tasks.png" alt="" />
-                  <h3
-                    class={css({
-                      mt: 5,
-                      color: 'gray.400',
-                    })}
-                  >
-                    #products
-                  </h3>
-                </a>
-              </div>
+              {cards.map((card) => (
+                <Card card={card} />
+              ))}
             </div>
           </div>
         </div>
