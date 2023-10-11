@@ -9,7 +9,7 @@ export const home = new Elysia().use(html()).get('/', ({ html }) => {
   const frontend = ['HTMX', 'Alpine.js', 'PandaCSS'];
   const cards = [
     { url: '/tasks', image: '/public/assets/tasks.png', text: '#tasks' },
-    { url: '/products', image: '/public/assets/tasks.png', text: '#products' },
+    { url: '/products', image: '/public/assets/products.png', text: '#products' },
   ];
 
   return html(

@@ -1,8 +1,8 @@
-import { Breadcrumb } from '@/components';
+import { Breadcrumb, ProductList } from '@/components';
 import { Layout } from '@/layouts';
 import { html } from '@elysiajs/html';
 import { css } from '@styled-system/css';
-import { Elysia, t } from 'elysia';
+import { Elysia } from 'elysia';
 
 export const products = new Elysia().use(html()).get('/products', ({ html }) =>
   html(
@@ -20,12 +20,9 @@ export const products = new Elysia().use(html()).get('/products', ({ html }) =>
             class={css({
               bg: 'white',
               borderRadius: 'sm',
-              px: 2,
-              py: 24,
-              textAlign: 'center',
             })}
           >
-            <h3>Coming soon...</h3>
+            <ProductList />
           </div>
         </div>
       </body>

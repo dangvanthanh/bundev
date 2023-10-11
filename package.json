@@ -3,14 +3,13 @@
   "module": "src/index.tsx",
   "type": "module",
   "scripts": {
-    "db:push": "bunx drizzle-kit push:sqlite",
-    "db:studio": "bunx drizzle-kit studio",
-    "prepare": "panda codegen",
+    "db:push": "drizzle-kit push:sqlite",
+    "db:studio": "drizzle-kit studio",
     "css:dev": "panda --watch",
     "dev": "concurrently \"bun run --watch src/index.tsx\" \"bun run css:dev\"",
     "bench": "bun run src/bench.ts",
-    "lint": "bunx biome check ./src/**/*.{ts,tsx}",
-    "format": "bunx biome format ./src/**/*.{ts,tsx} --write"
+    "lint": "biome check ./src/**/*.{ts,tsx}",
+    "format": "biome format ./src/**/*.{ts,tsx} --write"
   },
   "dependencies": {
     "@elysiajs/cors": "^0.7.0",
@@ -19,7 +18,7 @@
     "@kitajs/html": "^3.0.0",
     "@kitajs/ts-html-plugin": "^1.0.2",
     "@libsql/client": "^0.3.5",
-    "better-sqlite3": "^8.6.0",
+    "better-sqlite3": "^9.0.0",
     "drizzle-orm": "^0.28.6",
     "elysia": "^0.7.14"
   },
@@ -28,7 +27,7 @@
     "@flydotio/dockerfile": "^0.4.10",
     "@pandacss/dev": "^0.15.0",
     "@types/react": "^18.2.21",
-    "bun-types": "^1.0.3",
+    "bun-types": "^1.0.4",
     "concurrently": "^8.2.1",
     "drizzle-kit": "^0.19.13",
     "mitata": "^0.1.6"
