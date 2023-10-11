@@ -1,7 +1,7 @@
 import { css } from '@styled-system/css';
 import { flex } from '@styled-system/patterns';
 
-enum STATUS {
+export enum STATUS {
   IN_PROGRESS = 'In progress',
   DONE = 'Done',
   REJECTED = 'Rejected',

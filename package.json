@@ -5,6 +5,7 @@
   "scripts": {
     "db:push": "drizzle-kit push:sqlite",
     "db:studio": "drizzle-kit studio",
+    "prepare": "panda codegen",
     "css:dev": "panda --watch",
     "dev": "concurrently \"bun run --watch src/index.tsx\" \"bun run css:dev\"",
     "bench": "bun run src/bench.ts",

@@ -1,13 +1,6 @@
 import { css } from '@styled-system/css';
 import { flex } from '@styled-system/patterns';
-import { ProductStatus } from './ProductStatus';
-
-enum STATUS {
-  IN_PROGRESS = 'In progress',
-  DONE = 'Done',
-  REJECTED = 'Rejected',
-  ON_HOLD = 'On hold',
-}
+import { ProductStatus, STATUS } from './ProductStatus';
 
 export const ProductList = () => {
   const products = [
