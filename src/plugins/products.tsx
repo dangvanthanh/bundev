@@ -1,8 +1,8 @@
-import { Breadcrumb, ProductList } from '@/components';
-import { Layout } from '@/layouts';
-import { html } from '@elysiajs/html';
-import { css } from '@styled-system/css';
-import { Elysia } from 'elysia';
+import { Breadcrumb, ProductList } from '@/components'
+import { Layout } from '@/layouts'
+import { html } from '@elysiajs/html'
+import { css } from '@styled-system/css'
+import { Elysia } from 'elysia'
 
 export const products = new Elysia().use(html()).get('/products', ({ html }) =>
   html(
@@ -28,4 +28,4 @@ export const products = new Elysia().use(html()).get('/products', ({ html }) =>
       </body>
     </Layout>,
   ),
-);
+)

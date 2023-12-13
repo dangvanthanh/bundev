@@ -1,6 +1,6 @@
-import { Todo } from '@/db/schema';
-import { css } from '@styled-system/css';
-import { flex } from '@styled-system/patterns';
+import { Todo } from '@/db/schema'
+import { css } from '@styled-system/css'
+import { flex } from '@styled-system/patterns'
 
 export const TodoItem = ({ content, completed, id }: Todo) => {
   return (
@@ -82,6 +82,7 @@ export const TodoItem = ({ content, completed, id }: Todo) => {
               animation: 'firework .5s ease forwards .1s',
             },
           })}
+          safe
         >
           {content}
         </label>
@@ -97,5 +98,5 @@ export const TodoItem = ({ content, completed, id }: Todo) => {
         &times;
       </button>
     </article>
-  );
-};
+  )
+}

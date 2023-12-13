@@ -9,8 +9,8 @@
     "css:dev": "panda --watch",
     "dev": "concurrently \"bun run --watch src/index.tsx\" \"bun run css:dev\"",
     "bench": "bun run src/bench.ts",
-    "lint": "bunx @biomejs/biome check ./src/**/*.{ts,tsx}",
-    "format": "bunx @biomejs/biome format ./src/**/*.{ts,tsx} --write",
+    "lint": "bunx @biomejs/biome check ./src",
+    "format": "bunx @biomejs/biome format ./src --write",
     "update": "bunx npm-check-updates --interactive --format group"
   },
   "dependencies": {

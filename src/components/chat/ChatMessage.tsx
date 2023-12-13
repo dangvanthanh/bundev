@@ -1,8 +1,8 @@
-import { css } from '@styled-system/css';
-import { flex } from '@styled-system/patterns';
+import { css } from '@styled-system/css'
+import { flex } from '@styled-system/patterns'
 
 interface IChatMessage {
-  type: string;
+  type: string
 }
 
 export const ChatMessage = ({ type }: IChatMessage) => {
@@ -58,5 +58,5 @@ export const ChatMessage = ({ type }: IChatMessage) => {
         doloribus.
       </div>
     </div>
-  );
-};
+  )
+}

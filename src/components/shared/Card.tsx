@@ -1,13 +1,13 @@
-import { css } from '@styled-system/css';
-import { flex } from '@styled-system/patterns';
+import { css } from '@styled-system/css'
+import { flex } from '@styled-system/patterns'
 
 interface CardProps {
-    url: string;
-    image: string;
-    text: string
+  url: string
+  image: string
+  text: string
 }
 
-export const Card = ({card}: {card: CardProps}) => {
+export const Card = ({ card }: { card: CardProps }) => {
   return (
     <div
       class={css({
@@ -23,10 +23,11 @@ export const Card = ({card}: {card: CardProps}) => {
             mt: 5,
             color: 'gray.400',
           })}
+          safe
         >
           {card.text}
         </h3>
       </a>
     </div>
-  );
-};
+  )
+}

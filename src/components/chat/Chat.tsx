@@ -1,7 +1,7 @@
-import { css } from '@styled-system/css';
-import { flex } from '@styled-system/patterns';
-import { ChatButton } from './ChatButton';
-import { ChatMessage } from './ChatMessage';
+import { css } from '@styled-system/css'
+import { flex } from '@styled-system/patterns'
+import { ChatButton } from './ChatButton'
+import { ChatMessage } from './ChatMessage'
 
 export const Chat = () => {
   return (
@@ -100,5 +100,5 @@ export const Chat = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

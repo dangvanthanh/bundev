@@ -1,4 +1,4 @@
-import { css } from '@styled-system/css';
+import { css } from '@styled-system/css'
 
 export const ChatButton = ({ bg, ...rest }: { bg: string }) => {
   return (
@@ -16,5 +16,5 @@ export const ChatButton = ({ bg, ...rest }: { bg: string }) => {
     >
       <i data-lucide="send-horizontal" class={css({ color: 'white', w: '4', h: '4' })} />
     </button>
-  );
-};
+  )
+}

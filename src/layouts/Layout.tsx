@@ -1,4 +1,4 @@
-import Html from '@kitajs/html';
+import Html from '@kitajs/html'
 
 export const Layout = ({ children }: Html.PropsWithChildren) => {
   return (
@@ -20,5 +20,5 @@ export const Layout = ({ children }: Html.PropsWithChildren) => {
         <script src="/public/js/script.js" />
       </body>
     </html>
-  );
-};
+  )
+}

@@ -1,16 +1,16 @@
-import { Card } from '@/components';
-import { Layout } from '@/layouts';
-import { html } from '@elysiajs/html';
-import { css } from '@styled-system/css';
-import { flex, grid } from '@styled-system/patterns';
-import { Elysia } from 'elysia';
+import { Card } from '@/components'
+import { Layout } from '@/layouts'
+import { html } from '@elysiajs/html'
+import { css } from '@styled-system/css'
+import { grid } from '@styled-system/patterns'
+import { Elysia } from 'elysia'
 
 export const home = new Elysia().use(html()).get('/', ({ html }) => {
-  const frontend = ['HTMX', 'Alpine.js', 'PandaCSS'];
+  const frontend = ['HTMX', 'Alpine.js', 'PandaCSS']
   const cards = [
     { url: '/tasks', image: '/public/assets/tasks.png', text: '#tasks' },
     { url: '/products', image: '/public/assets/products.png', text: '#products' },
-  ];
+  ]
 
   return html(
     <Layout>
@@ -36,7 +36,7 @@ export const home = new Elysia().use(html()).get('/', ({ html }) => {
             Experience with Bun, Elysiajs, Turso and{' '}
             <span class={css({ pos: 'relative', display: 'inline-flex' })}>
               {frontend.slice(0, 1).map((fe) => (
-                <span>{fe}</span>
+                <span safe>{fe}</span>
               ))}
             </span>
           </h1>
@@ -56,5 +56,5 @@ export const home = new Elysia().use(html()).get('/', ({ html }) => {
         </div>
       </body>
     </Layout>,
-  );
-});
+  )
+})

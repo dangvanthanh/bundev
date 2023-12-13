@@ -1,6 +1,6 @@
-import { css } from '@styled-system/css';
-import { flex } from '@styled-system/patterns';
-import { ProductStatus, STATUS } from './ProductStatus';
+import { css } from '@styled-system/css'
+import { flex } from '@styled-system/patterns'
+import { ProductStatus, STATUS } from './ProductStatus'
 
 export const ProductList = () => {
   const products = [
@@ -9,14 +9,14 @@ export const ProductList = () => {
     { name: 'A/B Testing', assignee: 'Thanh Dang', status: STATUS.REJECTED, rating: 5 },
     { name: 'Design System', assignee: 'Hoa Long', status: STATUS.ON_HOLD, rating: 3 },
     { name: 'UI Library', assignee: 'Thanh Tung', status: STATUS.IN_PROGRESS, rating: 2 },
-  ];
+  ]
 
   const table = css({
     w: 'full',
     borderCollapse: 'collapse',
     rounded: 'sm',
     overflow: 'hidden',
-  });
+  })
 
   const tableTh = css({
     p: 2,
@@ -26,7 +26,7 @@ export const ProductList = () => {
     fontSize: 'sm',
     color: 'gray.400',
     fontWeight: '600',
-  });
+  })
 
   const tableTd = css({
     p: 2,
@@ -35,11 +35,11 @@ export const ProductList = () => {
     borderColor: 'gray.200',
     fontSize: 'sm',
     color: 'violet.800',
-  });
+  })
 
   const fillStar = (n: number, rating: number) => {
-    return n <= rating ? 'currentColor' : 'none';
-  };
+    return n <= rating ? 'currentColor' : 'none'
+  }
 
   return (
     <div
@@ -61,8 +61,12 @@ export const ProductList = () => {
         <tbody>
           {products.map((product) => (
             <tr>
-              <td class={tableTd}>{product.name}</td>
-              <td class={tableTd}>{product.assignee}</td>
+              <td class={tableTd} safe>
+                {product.name}
+              </td>
+              <td class={tableTd} safe>
+                {product.assignee}
+              </td>
               <td class={tableTd}>
                 <ProductStatus status={product.status} />
               </td>
@@ -89,5 +93,5 @@ export const ProductList = () => {
         </tbody>
       </table>
     </div>
-  );
-};
+  )
+}

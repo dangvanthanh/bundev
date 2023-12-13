@@ -1,7 +1,7 @@
-import { Todo } from '@/db/schema';
-import { css } from '@styled-system/css';
-import { TodoForm } from './TodoForm';
-import { TodoItem } from './TodoItem';
+import { Todo } from '@/db/schema'
+import { css } from '@styled-system/css'
+import { TodoForm } from './TodoForm'
+import { TodoItem } from './TodoItem'
 
 export const TodoList = ({ todos }: { todos: Todo[] }) => {
   return (
@@ -19,5 +19,5 @@ export const TodoList = ({ todos }: { todos: Todo[] }) => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}

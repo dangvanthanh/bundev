@@ -1,11 +1,11 @@
-import { Breadcrumb, TodoItem, TodoList } from '@/components';
-import { db } from '@/db';
-import { todos } from '@/db/schema';
-import { Layout } from '@/layouts';
-import { html } from '@elysiajs/html';
-import { css } from '@styled-system/css';
-import { eq } from 'drizzle-orm';
-import { Elysia, t } from 'elysia';
+import { Breadcrumb, TodoItem, TodoList } from '@/components'
+import { db } from '@/db'
+import { todos } from '@/db/schema'
+import { Layout } from '@/layouts'
+import { html } from '@elysiajs/html'
+import { css } from '@styled-system/css'
+import { eq } from 'drizzle-orm'
+import { Elysia, t } from 'elysia'
 
 export const tasks = new Elysia()
   .use(html())
@@ -26,21 +26,21 @@ export const tasks = new Elysia()
     ),
   )
   .get('/todos', async () => {
-    const data = await db.select().from(todos).all();
-    return <TodoList todos={data} />;
+    const data = await db.select().from(todos).all()
+    return <TodoList todos={data} />
   })
   .post(
     '/todos/toggle/:id',
     async ({ params }) => {
-      const oldTodo = await db.select().from(todos).where(eq(todos.id, params.id)).get();
+      const oldTodo = await db.select().from(todos).where(eq(todos.id, params.id)).get()
       const newTodo = await db
         .update(todos)
         .set({ completed: !oldTodo?.completed })
         .where(eq(todos.id, params.id))
         .returning()
-        .get();
+        .get()
 
-      return <TodoItem {...newTodo} />;
+      return <TodoItem {...newTodo} />
     },
     {
       params: t.Object({
@@ -51,7 +51,7 @@ export const tasks = new Elysia()
   .delete(
     '/todos/:id',
     async ({ params }) => {
-      await db.delete(todos).where(eq(todos.id, params.id)).run();
+      await db.delete(todos).where(eq(todos.id, params.id)).run()
     },
     {
       params: t.Object({
@@ -62,12 +62,12 @@ export const tasks = new Elysia()
   .post(
     '/todos',
     async ({ body }) => {
-      const newTodo = await db.insert(todos).values(body).returning().get();
-      return <TodoItem {...newTodo} />;
+      const newTodo = await db.insert(todos).values(body).returning().get()
+      return <TodoItem {...newTodo} />
     },
     {
       body: t.Object({
         content: t.String({ minLength: 1 }),
       }),
     },
-  );
+  )

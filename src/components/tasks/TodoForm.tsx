@@ -1,5 +1,5 @@
-import { css } from '@styled-system/css';
-import { flex } from '@styled-system/patterns';
+import { css } from '@styled-system/css'
+import { flex } from '@styled-system/patterns'
 
 export const TodoForm = () => {
   return (
@@ -53,5 +53,5 @@ export const TodoForm = () => {
         </button>
       </div>
     </form>
-  );
-};
+  )
+}

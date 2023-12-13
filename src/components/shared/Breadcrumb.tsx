@@ -1,4 +1,4 @@
-import { css } from '@styled-system/css';
+import { css } from '@styled-system/css'
 
 export const Breadcrumb = ({ text }: { text: string }) => {
   return (
@@ -12,8 +12,10 @@ export const Breadcrumb = ({ text }: { text: string }) => {
         <li>
           <i data-lucide="chevron-right" class={css({ w: 5, h: 5, color: 'gray.400' })} />
         </li>
-        <li class={css({ fontSize: 'sm', color: 'gray.500' })}>{text}</li>
+        <li class={css({ fontSize: 'sm', color: 'gray.500' })} safe>
+          {text}
+        </li>
       </ul>
     </div>
-  );
-};
+  )
+}

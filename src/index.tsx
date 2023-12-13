@@ -1,9 +1,9 @@
-import cors from '@elysiajs/cors';
-import staticPlugin from '@elysiajs/static';
-import { Elysia } from 'elysia';
-import { home, products, styledSystem, tasks } from './plugins';
+import cors from '@elysiajs/cors'
+import staticPlugin from '@elysiajs/static'
+import { Elysia } from 'elysia'
+import { home, products, styledSystem, tasks } from './plugins'
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000
 
 const app = new Elysia()
   .use(cors())
@@ -12,8 +12,8 @@ const app = new Elysia()
   .use(home)
   .use(products)
   .use(tasks)
-  .listen(port);
+  .listen(port)
 
-console.log(`🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`);
+console.log(`🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`)
 
-export type App = typeof app;
+export type App = typeof app
