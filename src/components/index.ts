@@ -1,6 +1,7 @@
 export * from './chat/ChatButton'
 export * from './chat/Chat'
 export * from './chat/ChatMessage'
+export * from './news/News'
 export * from './products/ProductList'
 export * from './shared/Breadcrumb'
 export * from './shared/Card'

@@ -10,6 +10,7 @@ export const home = new Elysia().use(html()).get('/', ({ html }) => {
   const cards = [
     { url: '/tasks', image: '/public/assets/tasks.png', text: '#tasks' },
     { url: '/products', image: '/public/assets/products.png', text: '#products' },
+    { url: '/news', image: '/public/assets/news.png', text: '#news' },
   ]
 
   return html(

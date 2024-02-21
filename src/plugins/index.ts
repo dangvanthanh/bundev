@@ -1,4 +1,5 @@
 export * from './styled-system'
 export * from './home'
+export * from './news'
 export * from './products'
 export * from './tasks'

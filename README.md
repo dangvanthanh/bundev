@@ -9,6 +9,7 @@ Create `.env` in root of this project. Add the database url and database auth to
 ```
 DATABASE_URL=""
 DATABASE_AUTH_TOKEN=""
+NEWS_API_KEY=""
 ```
 
 ## Technologies
