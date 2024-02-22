@@ -6,8 +6,8 @@ export const Layout = ({ children }: Html.PropsWithChildren) => {
       <head>
         <meta charset="UTF-8" />
         <title>Bun Dev - Experiencing with Bun, Elysiajs, Turso, Htmx</title>
-        <script src="https://unpkg.com/htmx.org@1.9.6" />
-        <script src="https://unpkg.com/hyperscript.org@0.9.11" />
+        <script src="https://unpkg.com/htmx.org@1.9.10" />
+        <script src="https://unpkg.com/hyperscript.org@0.9.12" />
         <link href="/styles.css" rel="stylesheet" />
         <link href="/reset.css" rel="stylesheet" />
         <link href="/global.css" rel="stylesheet" />

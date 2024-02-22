@@ -1,12 +1,6 @@
 import { css } from '@styled-system/css'
 import { flex } from '@styled-system/patterns'
-
-export enum STATUS {
-  IN_PROGRESS = 'In progress',
-  DONE = 'Done',
-  REJECTED = 'Rejected',
-  ON_HOLD = 'On hold',
-}
+import { STATUS } from './types'
 
 export const ProductStatus = ({ status }: { status: string }) => {
   const getBg = (s: string) =>

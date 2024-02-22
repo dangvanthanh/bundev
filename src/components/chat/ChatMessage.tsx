@@ -1,11 +1,8 @@
 import { css } from '@styled-system/css'
 import { flex } from '@styled-system/patterns'
+import { ChatMessageProps } from './types'
 
-interface IChatMessage {
-  type: string
-}
-
-export const ChatMessage = ({ type }: IChatMessage) => {
+export const ChatMessage = ({ type }: ChatMessageProps) => {
   return (
     <div
       class={flex({

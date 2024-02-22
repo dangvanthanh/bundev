@@ -1,6 +1,7 @@
 import { css } from '@styled-system/css'
 import { flex } from '@styled-system/patterns'
-import { ProductStatus, STATUS } from './ProductStatus'
+import { ProductStatus } from './ProductStatus'
+import { STATUS } from './types'
 
 export const ProductList = () => {
   const products = [

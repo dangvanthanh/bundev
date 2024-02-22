@@ -1,11 +1,6 @@
 import { css } from '@styled-system/css'
 import { flex } from '@styled-system/patterns'
-
-interface CardProps {
-  url: string
-  image: string
-  text: string
-}
+import { type CardProps } from './types'
 
 export const Card = ({ card }: { card: CardProps }) => {
   return (

@@ -1,4 +1,4 @@
-export interface NewItemProps {
+export type NewItemProps = {
   id: string
   name: string
   description: string
