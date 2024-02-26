@@ -19,7 +19,7 @@
     "@elysiajs/static": "^0.8.1",
     "@kitajs/html": "^3.1.2",
     "@kitajs/ts-html-plugin": "^1.3.4",
-    "@libsql/client": "^0.5.1",
+    "@libsql/client": "^0.5.2",
     "better-sqlite3": "^9.4.3",
     "drizzle-orm": "^0.29.4",
     "elysia": "^0.8.17"
@@ -27,10 +27,10 @@
   "devDependencies": {
     "@biomejs/biome": "^1.5.3",
     "@flydotio/dockerfile": "^0.5.2",
-    "@pandacss/dev": "^0.32.0",
-    "@pandacss/types": "^0.32.0",
-    "@types/react": "^18.2.57",
-    "bun-types": "^1.0.28",
+    "@pandacss/dev": "^0.32.1",
+    "@pandacss/types": "^0.32.1",
+    "@types/react": "^18.2.58",
+    "bun-types": "^1.0.29",
     "concurrently": "^8.2.2",
     "drizzle-kit": "^0.20.14",
     "mitata": "^0.1.11"
