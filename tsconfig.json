@@ -22,7 +22,7 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@styled-system/*": ["./styled-system/*"]
+      "@/styled-system/*": ["./styled-system/*"]
     }
   }
 }

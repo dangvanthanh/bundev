@@ -1,4 +1,4 @@
-import { css } from '@styled-system/css'
+import { css } from '@/styled-system/css'
 import { NewItem } from './NewItem'
 import { type NewItemProps } from './types'
 

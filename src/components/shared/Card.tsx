@@ -1,5 +1,5 @@
-import { css } from '@styled-system/css'
-import { flex } from '@styled-system/patterns'
+import { css } from '@/styled-system/css'
+import { flex } from '@/styled-system/patterns'
 import { type CardProps } from './types'
 
 export const Card = ({ card }: { card: CardProps }) => {

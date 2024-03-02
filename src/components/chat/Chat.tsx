@@ -1,5 +1,5 @@
-import { css } from '@styled-system/css'
-import { flex } from '@styled-system/patterns'
+import { css } from '@/styled-system/css'
+import { flex } from '@/styled-system/patterns'
 import { ChatButton } from './ChatButton'
 import { ChatMessage } from './ChatMessage'
 

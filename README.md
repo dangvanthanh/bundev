@@ -7,8 +7,8 @@
 Create `.env` in root of this project. Add the database url and database auth token for the database used in [Turso](https://turso.tech/).  
 
 ```
-DATABASE_URL=""
-DATABASE_AUTH_TOKEN=""
+TURSO_DATABASE_URL=""
+TURSO_AUTH_TOKEN=""
 NEWS_API_KEY=""
 ```
 

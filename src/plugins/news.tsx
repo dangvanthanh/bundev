@@ -1,8 +1,8 @@
 import { Breadcrumb, News } from '@/components'
 import { NewItemProps } from '@/components/news/types'
 import { Layout } from '@/layouts'
+import { css } from '@/styled-system/css'
 import { html } from '@elysiajs/html'
-import { css } from '@styled-system/css'
 import { Elysia } from 'elysia'
 
 export const news = new Elysia()

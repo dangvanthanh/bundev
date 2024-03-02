@@ -1,7 +1,7 @@
 import { Breadcrumb, ProductList } from '@/components'
 import { Layout } from '@/layouts'
+import { css } from '@/styled-system/css'
 import { html } from '@elysiajs/html'
-import { css } from '@styled-system/css'
 import { Elysia } from 'elysia'
 
 export const products = new Elysia().use(html()).get('/products', ({ html }) =>

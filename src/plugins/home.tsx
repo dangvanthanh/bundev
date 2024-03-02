@@ -1,8 +1,8 @@
 import { Card } from '@/components'
 import { Layout } from '@/layouts'
+import { css } from '@/styled-system/css'
+import { grid } from '@/styled-system/patterns'
 import { html } from '@elysiajs/html'
-import { css } from '@styled-system/css'
-import { grid } from '@styled-system/patterns'
 import { Elysia } from 'elysia'
 
 export const home = new Elysia().use(html()).get('/', ({ html }) => {

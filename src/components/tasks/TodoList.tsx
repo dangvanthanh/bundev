@@ -1,5 +1,5 @@
 import { Todo } from '@/db/schema'
-import { css } from '@styled-system/css'
+import { css } from '@/styled-system/css'
 import { TodoForm } from './TodoForm'
 import { TodoItem } from './TodoItem'
 
