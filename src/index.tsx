@@ -1,7 +1,7 @@
 import cors from '@elysiajs/cors'
 import staticPlugin from '@elysiajs/static'
 import { Elysia } from 'elysia'
-import { home, news, products, styledSystem, tasks } from './plugins'
+import { home, news, predictiveText, products, styledSystem, tasks } from './plugins'
 
 const port = process.env.PORT || 3000
 
@@ -11,6 +11,7 @@ const app = new Elysia()
   .use(styledSystem)
   .use(home)
   .use(news)
+  .use(predictiveText)
   .use(products)
   .use(tasks)
   .listen(port)

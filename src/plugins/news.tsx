@@ -1,5 +1,5 @@
 import { Breadcrumb, News } from '@/components'
-import { NewItemProps } from '@/components/news/types'
+import type { NewItemProps } from '@/components/news/types'
 import { Layout } from '@/layouts'
 import { css } from '@/styled-system/css'
 import { html } from '@elysiajs/html'

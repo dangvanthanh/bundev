@@ -1,4 +1,4 @@
-import Html from '@kitajs/html'
+import '@kitajs/html/register'
 
 export const Layout = ({ children }: Html.PropsWithChildren) => {
   return (

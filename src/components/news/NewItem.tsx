@@ -1,6 +1,6 @@
 import { css } from '@/styled-system/css'
 import { flex } from '@/styled-system/patterns'
-import { type NewItemProps } from './types'
+import type { NewItemProps } from './types'
 
 export const NewItem = ({ item }: { item: NewItemProps }) => {
   return (
