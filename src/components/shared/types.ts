@@ -1,5 +1,5 @@
 export type CardProps = {
-  url: string
-  image: string
-  text: string
+	url: string
+	image: string
+	text: string
 }
