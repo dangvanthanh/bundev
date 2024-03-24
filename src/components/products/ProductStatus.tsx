@@ -13,10 +13,10 @@ export const ProductStatus = ({ status }: { status: string }) => {
 					status === STATUS.DONE
 						? 'green.50'
 						: status === STATUS.REJECTED
-						  ? 'red.50'
-						  : status === STATUS.ON_HOLD
-							  ? 'gray.50'
-							  : 'blue.50',
+							? 'red.50'
+							: status === STATUS.ON_HOLD
+								? 'gray.50'
+								: 'blue.50',
 				px: 1.5,
 				py: 0.5,
 				rounded: 'xl',
@@ -24,10 +24,10 @@ export const ProductStatus = ({ status }: { status: string }) => {
 					status === STATUS.DONE
 						? 'green.500'
 						: status === STATUS.REJECTED
-						  ? 'red.500'
-						  : status === STATUS.ON_HOLD
-							  ? 'gray.500'
-							  : 'blue.500',
+							? 'red.500'
+							: status === STATUS.ON_HOLD
+								? 'gray.500'
+								: 'blue.500',
 			})}
 		>
 			<span
@@ -39,10 +39,10 @@ export const ProductStatus = ({ status }: { status: string }) => {
 						status === STATUS.DONE
 							? 'green.500'
 							: status === STATUS.REJECTED
-							  ? 'red.500'
-							  : status === STATUS.ON_HOLD
-								  ? 'gray.500'
-								  : 'blue.500',
+								? 'red.500'
+								: status === STATUS.ON_HOLD
+									? 'gray.500'
+									: 'blue.500',
 				})}
 			/>
 			<span safe>{status}</span>
