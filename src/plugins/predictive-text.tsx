@@ -32,5 +32,5 @@ export const predictiveText = new Elysia()
 		),
 	)
 	.get('predictive-text-suggestions', () => {
-		return 'New suggestions'
+		return 'Coming soon'
 	})
