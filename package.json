@@ -42,6 +42,6 @@
 		"mitata": "^0.1.11"
 	},
 	"lint-staged": {
-		"*.{js,ts,tsx}": ["pnpm run lint", "pnpm run format"]
+		"*.{js,ts,tsx}": ["bun run lint", "bun run format"]
 	}
 }
