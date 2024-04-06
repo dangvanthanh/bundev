@@ -9,22 +9,20 @@ import { Elysia, t } from 'elysia'
 
 export const tasks = new Elysia()
 	.use(html())
-	.get('/tasks', ({ html }) =>
-		html(
-			<Layout>
-				<body
-					class={css({
-						height: '100vh',
-						margin: 0,
-						bg: 'gray.200',
-					})}
-				>
-					<Breadcrumb text="Tasks" />
-					<div hx-get="/todos" hx-swap="innerHTML" hx-trigger="load" />
-				</body>
-			</Layout>,
-		),
-	)
+	.get('/tasks', () => (
+		<Layout>
+			<body
+				class={css({
+					height: '100vh',
+					margin: 0,
+					bg: 'gray.200',
+				})}
+			>
+				<Breadcrumb text="Tasks" />
+				<div hx-get="/todos" hx-swap="innerHTML" hx-trigger="load" />
+			</body>
+		</Layout>
+	))
 	.get('/todos', async () => {
 		const data = await db.select().from(todos).all()
 		return <TodoList todos={data} />

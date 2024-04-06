@@ -31,6 +31,7 @@ export const TodoForm = () => {
 						px: 3,
 						py: 1.5,
 						flex: '1 1 0%',
+						border: 0,
 						_placeholder: {
 							color: 'gray.500',
 						},

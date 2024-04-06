@@ -7,31 +7,29 @@ import { Elysia } from 'elysia'
 
 export const news = new Elysia()
 	.use(html())
-	.get('/news', ({ html }) =>
-		html(
-			<Layout>
-				<body
-					class={css({
-						height: '100vh',
-						margin: 0,
-						bg: 'gray.200',
-					})}
-				>
-					<Breadcrumb text="News" />
-					<div class={css({ maxW: 'md', mx: 'auto', py: 12 })}>
-						<div
-							class={css({
-								bg: 'white',
-								borderRadius: 'sm',
-							})}
-						>
-							<div hx-get="/fetch-news" hx-swap="innerHTML" hx-trigger="load" />
-						</div>
+	.get('/news', () => (
+		<Layout>
+			<body
+				class={css({
+					height: '100vh',
+					margin: 0,
+					bg: 'gray.200',
+				})}
+			>
+				<Breadcrumb text="News" />
+				<div class={css({ maxW: 'md', mx: 'auto', py: 12 })}>
+					<div
+						class={css({
+							bg: 'white',
+							borderRadius: 'sm',
+						})}
+					>
+						<div hx-get="/fetch-news" hx-swap="innerHTML" hx-trigger="load" />
 					</div>
-				</body>
-			</Layout>,
-		),
-	)
+				</div>
+			</body>
+		</Layout>
+	))
 	.get('/fetch-news', async () => {
 		const response = await fetch(
 			`https://newsapi.org/v2/top-headlines/sources?category=technology&apiKey=${process.env.NEWS_API_KEY}`,

@@ -5,7 +5,7 @@ import { grid } from '@/styled-system/patterns'
 import { html } from '@elysiajs/html'
 import { Elysia } from 'elysia'
 
-export const home = new Elysia().use(html()).get('/', ({ html }) => {
+export const home = new Elysia().use(html()).get('/', () => {
 	const frontend = ['HTMX', 'Alpine.js', 'PandaCSS']
 	const cards = [
 		{ url: '/tasks', image: '/public/assets/tasks.png', text: '#tasks' },
@@ -20,9 +20,14 @@ export const home = new Elysia().use(html()).get('/', ({ html }) => {
 			image: '/public/assets/predictive-text.png',
 			text: '#predictive-text',
 		},
+		{
+			url: '/text-to-speech',
+			image: '/public/assets/text-to-speech.png',
+			text: '#text-to-speech',
+		},
 	]
 
-	return html(
+	return (
 		<Layout>
 			<body
 				class={css({
@@ -65,6 +70,6 @@ export const home = new Elysia().use(html()).get('/', ({ html }) => {
 					</div>
 				</div>
 			</body>
-		</Layout>,
+		</Layout>
 	)
 })

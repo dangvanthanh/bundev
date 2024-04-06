@@ -8,6 +8,7 @@ import {
 	products,
 	styledSystem,
 	tasks,
+	textToSpeech,
 } from './plugins'
 
 const port = process.env.PORT || 3000
@@ -21,6 +22,7 @@ const app = new Elysia()
 	.use(predictiveText)
 	.use(products)
 	.use(tasks)
+	.use(textToSpeech)
 	.listen(port)
 
 console.log(
