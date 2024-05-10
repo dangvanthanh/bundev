@@ -12,7 +12,7 @@ export const News = ({ news }: { news: NewItemProps[] }) => {
 			})}
 		>
 			{news.map((item) => (
-				<NewItem item={item} />
+				<NewItem key={item.id} item={item} />
 			))}
 		</div>
 	)

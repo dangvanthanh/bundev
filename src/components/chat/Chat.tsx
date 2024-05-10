@@ -1,5 +1,6 @@
 import { css } from '@/styled-system/css'
 import { flex } from '@/styled-system/patterns'
+import { useId } from 'react'
 import { ChatButton } from './ChatButton'
 import { ChatMessage } from './ChatMessage'
 
@@ -27,7 +28,7 @@ export const Chat = () => {
 					})}
 				>
 					{Array.from({ length: 10 }, (_) => (
-						<div>
+						<div key={useId()}>
 							<ChatMessage type="user" />
 							<ChatMessage type="bot" />
 						</div>

@@ -4,23 +4,37 @@ import { css } from '@/styled-system/css'
 import { grid } from '@/styled-system/patterns'
 import { html } from '@elysiajs/html'
 import { Elysia } from 'elysia'
+import { useId } from 'react'
 
 export const home = new Elysia().use(html()).get('/', () => {
 	const frontend = ['HTMX', 'Alpine.js', 'PandaCSS']
 	const cards = [
-		{ url: '/tasks', image: '/public/assets/tasks.png', text: '#tasks' },
 		{
+			id: useId(),
+			url: '/tasks',
+			image: '/public/assets/tasks.png',
+			text: '#tasks',
+		},
+		{
+			id: useId(),
 			url: '/products',
 			image: '/public/assets/products.png',
 			text: '#products',
 		},
-		{ url: '/news', image: '/public/assets/news.png', text: '#news' },
 		{
+			id: useId(),
+			url: '/news',
+			image: '/public/assets/news.png',
+			text: '#news',
+		},
+		{
+			id: useId(),
 			url: '/predictive-text',
 			image: '/public/assets/predictive-text.png',
 			text: '#predictive-text',
 		},
 		{
+			id: useId(),
 			url: '/text-to-speech',
 			image: '/public/assets/text-to-speech.png',
 			text: '#text-to-speech',
@@ -51,7 +65,9 @@ export const home = new Elysia().use(html()).get('/', () => {
 						Experience with Bun, Elysiajs, Turso and{' '}
 						<span class={css({ pos: 'relative', display: 'inline-flex' })}>
 							{frontend.slice(0, 1).map((fe) => (
-								<span safe>{fe}</span>
+								<span key={`fe-${fe}`} safe>
+									{fe}
+								</span>
 							))}
 						</span>
 					</h1>
@@ -64,7 +80,7 @@ export const home = new Elysia().use(html()).get('/', () => {
 							})}
 						>
 							{cards.map((card) => (
-								<Card card={card} />
+								<Card card={card} key={card.id} />
 							))}
 						</div>
 					</div>

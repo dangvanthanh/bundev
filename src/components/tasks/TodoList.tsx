@@ -15,7 +15,7 @@ export const TodoList = ({ todos }: { todos: Todo[] }) => {
 			>
 				<TodoForm />
 				{todos.map((todo) => (
-					<TodoItem {...todo} />
+					<TodoItem {...todo} key={todo.id} />
 				))}
 			</div>
 		</div>

@@ -86,7 +86,7 @@ export const ProductList = () => {
 				</thead>
 				<tbody>
 					{products.map((product) => (
-						<tr>
+						<tr key={product.name}>
 							<td class={tableTd} safe>
 								{product.name}
 							</td>
@@ -100,6 +100,7 @@ export const ProductList = () => {
 								<div class={flex({ align: 'center' })}>
 									{Array.from(Array(5).keys()).map((n) => (
 										<svg
+											key={n}
 											class={css({ w: 3, h: 3 })}
 											fill={fillStar(n, product.rating)}
 											stroke="currentColor"
