@@ -7,7 +7,7 @@ export const TextToSpeech = () => {
 			<form
 				hx-post="/convert-text-to-speech"
 				hx-target="#speech"
-				hx-swap="outerHTML"
+				hx-swap="innerHTML"
 			>
 				<textarea
 					class={css({
@@ -19,6 +19,7 @@ export const TextToSpeech = () => {
 					})}
 					placeholder="Enter the text you want to convert to speech"
 					maxlength="200"
+					name="speech"
 				/>
 				<div class={flex({ justify: 'end', mt: 2 })}>
 					<button

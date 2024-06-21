@@ -4,7 +4,6 @@ import { Elysia } from 'elysia'
 import {
 	home,
 	news,
-	predictiveText,
 	products,
 	styledSystem,
 	tasks,
@@ -19,7 +18,6 @@ const app = new Elysia()
 	.use(styledSystem)
 	.use(home)
 	.use(news)
-	.use(predictiveText)
 	.use(products)
 	.use(tasks)
 	.use(textToSpeech)
