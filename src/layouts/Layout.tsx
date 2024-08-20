@@ -8,7 +8,7 @@ export const Layout = ({ children }: Html.PropsWithChildren) => {
 				<script src="https://unpkg.com/hyperscript.org@0.9.12" />
 				<link href="/styles.css" rel="stylesheet" />
 			</head>
-			<body>
+			<body safe>
 				{children}
 				<script src="https://unpkg.com/lucide@latest" />
 				<script src="/public/js/script.js" />

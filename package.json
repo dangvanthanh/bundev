@@ -1,47 +1,49 @@
 {
-	"name": "bundev",
-	"module": "src/index.tsx",
-	"type": "module",
-	"scripts": {
-		"db:push": "drizzle-kit push:sqlite",
-		"db:studio": "drizzle-kit studio",
-		"prepare": "husky",
-		"css:dev": "panda --watch",
-		"dev": "concurrently \"bun run --watch src/index.tsx\" \"bun run css:dev\"",
-		"bench": "bun run src/bench.ts",
-		"lint": "bunx @biomejs/biome check ./src",
-		"format": "bunx @biomejs/biome format ./src --write",
-		"update": "bunx npm-check-updates -ui",
-		"test": "xss-scan"
-	},
-	"dependencies": {
-		"@elysiajs/cors": "^1.0.2",
-		"@elysiajs/html": "^1.0.2",
-		"@elysiajs/static": "^1.0.3",
-		"@kitajs/html": "^4.1.0",
-		"@kitajs/ts-html-plugin": "^4.0.1",
-		"@libsql/client": "^0.6.2",
-		"ai": "^3.2.1",
-		"better-sqlite3": "^11.0.0",
-		"drizzle-orm": "^0.31.2",
-		"elysia": "^1.0.24",
-		"openai": "^4.52.0",
-		"zod": "^3.23.8"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "^1.8.2",
-		"@flydotio/dockerfile": "^0.5.7",
-		"@pandacss/dev": "^0.41.0",
-		"@pandacss/types": "^0.41.0",
-		"@types/react": "^18.3.3",
-		"bun-types": "^1.1.15",
-		"concurrently": "^8.2.2",
-		"drizzle-kit": "^0.22.7",
-		"husky": "^9.0.11",
-		"lint-staged": "^15.2.7",
-		"mitata": "^0.1.11"
-	},
-	"lint-staged": {
-		"*.{js,ts,tsx}": ["bun run lint", "bun run format"]
-	}
+  "name": "bundev",
+  "module": "src/index.tsx",
+  "type": "module",
+  "scripts": {
+    "db:push": "drizzle-kit push:sqlite",
+    "db:studio": "drizzle-kit studio",
+    "prepare": "husky",
+    "css:dev": "panda --watch",
+    "dev": "concurrently \"bun run --watch src/index.tsx\" \"bun run css:dev\"",
+    "bench": "bun run src/bench.ts",
+    "lint": "bunx @biomejs/biome check ./src",
+    "format": "bunx @biomejs/biome format ./src --write",
+    "update": "bunx npm-check-updates -ui",
+    "test": "xss-scan",
+    "deploy": "wrangler deploy --minify src/index.tsx"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "^1.1.0",
+    "@elysiajs/html": "^1.1.0",
+    "@elysiajs/static": "^1.1.0",
+    "@kitajs/html": "^4.2.1",
+    "@kitajs/ts-html-plugin": "^4.0.2",
+    "@libsql/client": "^0.9.0",
+    "ai": "^3.3.11",
+    "better-sqlite3": "^11.1.2",
+    "drizzle-orm": "^0.33.0",
+    "elysia": "^1.1.7",
+    "openai": "^4.56.0",
+    "wrangler": "^3.72.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.3",
+    "@flydotio/dockerfile": "^0.5.8",
+    "@pandacss/dev": "^0.45.1",
+    "@pandacss/types": "^0.45.1",
+    "@types/react": "^18.3.3",
+    "bun-types": "^1.1.24",
+    "concurrently": "^8.2.2",
+    "drizzle-kit": "^0.24.0",
+    "husky": "^9.1.4",
+    "lint-staged": "^15.2.9",
+    "mitata": "^0.1.11"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": ["bun run lint", "bun run format"]
+  }
 }
