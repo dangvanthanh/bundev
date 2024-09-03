@@ -37,6 +37,7 @@ export const textToSpeech = new Elysia()
 	))
 	.post('/convert-text-to-speech', async ({ body }) => {
 		try {
+			const fileSpeech = 'public/audio/speech.mp3'
 			const mp3 = await openai.audio.speech.create({
 				model: 'tts-1',
 				voice: 'alloy',
@@ -44,12 +45,12 @@ export const textToSpeech = new Elysia()
 			})
 
 			const buffer = Buffer.from(await mp3.arrayBuffer())
-			await fs.promises.writeFile('public/audio/speech.mp3', buffer)
+			await fs.promises.writeFile(fileSpeech, buffer)
 
 			return (
 				<div class={css({ mt: 2 })}>
 					<audio
-						src="/public/audio/speech.mp3"
+						src={`/${fileSpeech}`}
 						class={css({ w: '100%' })}
 						controls="true"
 					>
