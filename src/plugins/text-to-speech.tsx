@@ -40,7 +40,7 @@ export const textToSpeech = new Elysia()
 			const fileSpeech = 'public/audio/speech.mp3'
 			const mp3 = await openai.audio.speech.create({
 				model: 'tts-1',
-				voice: 'alloy',
+				voice: 'onyx',
 				input: body?.speech,
 			})
 

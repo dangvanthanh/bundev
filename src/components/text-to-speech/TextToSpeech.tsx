@@ -18,7 +18,7 @@ export const TextToSpeech = () => {
 						minH: 28,
 					})}
 					placeholder="Enter the text you want to convert to speech"
-					maxlength="200"
+					maxlength="10000"
 					name="speech"
 				/>
 				<div class={flex({ justify: 'end', mt: 2 })}>
