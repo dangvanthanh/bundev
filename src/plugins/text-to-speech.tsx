@@ -1,10 +1,10 @@
 import fs from 'node:fs'
-import { Breadcrumb, TextToSpeech } from '@/components'
-import { Layout } from '@/layouts'
-import { css } from '@/styled-system/css'
 import { html } from '@elysiajs/html'
 import { Elysia } from 'elysia'
 import OpenAI from 'openai'
+import { Breadcrumb, TextToSpeech } from '@/components'
+import { Layout } from '@/layouts'
+import { css } from '@/styled-system/css'
 
 const openai = new OpenAI({
 	apiKey: process.env.OPENAI_API_KEY,

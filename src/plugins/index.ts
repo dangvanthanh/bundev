@@ -1,6 +1,6 @@
-export * from './styled-system'
 export * from './home'
 export * from './news'
 export * from './products'
+export * from './styled-system'
 export * from './tasks'
 export * from './text-to-speech'

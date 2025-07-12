@@ -1,9 +1,9 @@
+import { html } from '@elysiajs/html'
+import { Elysia } from 'elysia'
 import { Card } from '@/components'
 import { Layout } from '@/layouts'
 import { css } from '@/styled-system/css'
 import { grid } from '@/styled-system/patterns'
-import { html } from '@elysiajs/html'
-import { Elysia } from 'elysia'
 
 export const home = new Elysia().use(html()).get('/', () => {
 	const frontend = ['HTMX', 'Alpine.js', 'PandaCSS']
